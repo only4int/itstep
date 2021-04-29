@@ -1,0 +1,15 @@
+h1{
+    font-size: 32px;
+}
+h2{
+    font-size: 24px;
+}
+p{
+    font-size: 14px;
+}
+.clgreen{
+    color: #36b436;
+}
+ul{
+    list-style: decimal;
+}
