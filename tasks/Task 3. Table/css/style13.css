@@ -1,0 +1,30 @@
+table{
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+td{
+    width: 200px;
+    height: 200px;
+    border: 5px solid #000;
+    background: orangered;
+    color: #fff;
+    font-size: 50px;
+}
+tr:nth-child(1) td{
+    text-align: left;
+}
+tr:nth-child(2) td{
+    text-align: center;
+}
+tr:nth-child(3) td{
+    text-align: right;
+}
+tr td:nth-child(1){
+    vertical-align: top;
+}
+tr td:nth-child(2){
+    vertical-align: middle;
+}
+tr td:nth-child(3){
+    vertical-align: bottom;
+}

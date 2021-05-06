@@ -1,0 +1,30 @@
+table{
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+td{
+    width: 200px;
+    height: 200px;
+    border: 5px solid #000;
+    background: orangered;
+    color: #fff;
+    font-size: 50px;
+}
+.align-left{
+   text-align: left; 
+}
+.align-center{
+    text-align: center; 
+ }
+ .align-right{
+    text-align: right; 
+ }
+ .valign-top{
+     vertical-align: top;
+ }
+ .valign-middle{
+    vertical-align: middle;
+}
+.valign-bottom{
+    vertical-align: bottom;
+}

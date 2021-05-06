@@ -1,0 +1,12 @@
+table{
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+td{
+    width: 200px;
+    height: 200px;
+    border: 5px solid #000;
+    background: orangered;
+    color: #fff;
+    font-size: 50px;
+}
