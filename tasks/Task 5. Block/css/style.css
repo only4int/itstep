@@ -6,7 +6,7 @@ html, body{
     width: 400px;
     height: 400px;
     background: chocolate;
-    position: absolute;
+    position: fixed;
     top: calc(50% - 200px);
     left: calc(50% - 200px);
 }
@@ -14,18 +14,25 @@ html, body{
     width: 100px;
     height: 100px;
     background: greenyellow;
-    position: absolute;   
+    position: fixed;   
     font-size: 30px;
     color: #000;
     text-align: center;
     line-height: 100px;
-    top: 0;
-    left: 0;
-    z-index: 200;
+}
+.in1{
+    top: calc(50% - 200px);
+    left: calc(50% - 200px);
 }
 .in2{
-    top: 50px;
-    left: 50px;
-    background: rebeccapurple;
-    z-index: 100;
+    top: calc(50% - 200px);
+    left: calc(50% + 100px);
+}
+.in3{
+    top: calc(50% + 100px);
+    left: calc(50% + 100px);
+}
+.in4{
+    top: calc(50% + 100px);
+    left: calc(50% - 200px);
 }
