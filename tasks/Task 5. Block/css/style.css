@@ -1,0 +1,33 @@
+html, body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+.out{
+    width: 400px;
+    height: 400px;
+    background: chocolate;
+    position: absolute;
+    top: calc(50% - 200px);
+    left: calc(50% - 200px);
+}
+.in{
+    width: 100px;
+    height: 100px;
+    background: greenyellow;
+    position: absolute;   
+    font-size: 30px;
+    color: #000;
+    text-align: center;
+    line-height: 100px;
+    top: 0;
+    left: 0;
+    z-index: 200;
+}
+.in2{
+    top: 50px;
+    left: 50px;
+    background: rebeccapurple;
+    z-index: 100;
+}
