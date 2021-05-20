@@ -1,12 +1,14 @@
 html, body{
     padding: 0;
     margin: 0;
+    width: 100%;
+    height: 100%;
 }
 .out{
     width: 400px;
     height: 400px;
     background: chocolate;
-    position: fixed;
+    position: relative;
     top: calc(50% - 200px);
     left: calc(50% - 200px);
 }
@@ -14,25 +16,22 @@ html, body{
     width: 100px;
     height: 100px;
     background: greenyellow;
-    position: fixed;   
+    position: relative;
+    float: left;   
     font-size: 30px;
     color: #000;
     text-align: center;
     line-height: 100px;
 }
 .in1{
-    top: calc(50% - 200px);
-    left: calc(50% - 200px);
+    margin: 400px 0 0 -100px;
 }
 .in2{
-    top: calc(50% - 200px);
-    left: calc(50% + 100px);
+    margin: -100px 0 0 -100px;
 }
 .in3{
-    top: calc(50% + 100px);
-    left: calc(50% + 100px);
+    margin: -100px 0 0 400px;
 }
 .in4{
-    top: calc(50% + 100px);
-    left: calc(50% - 200px);
+    margin: 400px 0 0 400px;
 }
