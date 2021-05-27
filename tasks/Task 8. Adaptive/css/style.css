@@ -1,0 +1,31 @@
+.container{
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.box{
+    background: #000;
+    width: 40%;
+    margin: 5%;
+    height: 200px;
+    position: relative;
+    float: left;
+}
+@media (min-width: 768px){
+    .box{
+        width: 15%;
+    }
+    .container{
+        width: 768px;
+    }
+}
+@media (min-width: 1280px){
+    .box{
+        width: 16%;
+        margin: 2%;
+    }
+    .container{
+        width: 1200px;
+    }
+}
