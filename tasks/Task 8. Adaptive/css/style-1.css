@@ -1,0 +1,38 @@
+body, html{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background: #000;
+}
+@media (min-width: 768px) {
+    .container{
+        width: 768px;
+    }
+    .box{
+        width: 100%;
+    }
+}
+@media (min-width: 1024px) {
+    .container{
+        width: 1024px;
+    }
+    .box{
+        height: 200px;  
+    }
+}
+@media (min-width: 1600px) {
+    .container{
+        width: 1600px;
+    }
+    .box{
+        height: 400px;
+    }
+}

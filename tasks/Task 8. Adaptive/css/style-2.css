@@ -1,0 +1,60 @@
+body, html{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+.box{
+    width: 96%;
+    height: 96px;
+    margin: 2px 2%;
+    background: red;
+    position: relative;
+    float: left;
+    color: #fff;
+    text-align: center;
+    line-height: 96px;
+   
+}
+.box:nth-child(2n){
+    display: block;
+}
+.box:nth-child(2n+1){
+    display: none;
+}
+@media (min-width: 768px) {
+    .container{
+        width: 768px;
+    }
+    .box{
+        width: 226px;
+        height: 226px;
+        margin: 15px;
+        line-height: 226px;
+    }
+    .box:nth-child(2n){
+        display: none;
+    }
+    .box:nth-child(2n+1){
+        display: block;
+        background: blue;
+    }
+
+}
+@media (min-width: 1280px) {
+    .container{
+        width: 1280px;
+    }
+    .box{
+        width: 183px;
+        height: 183px;
+        line-height: 183px;
+        margin: 15px;
+    }
+    .box:nth-child(2n){
+        display: block;
+    }
+}

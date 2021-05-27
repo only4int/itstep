@@ -1,0 +1,60 @@
+body, html{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+.box{
+    width: 96%;
+    height: 96px;
+    margin: 2px 2%;
+    background: red;
+    position: relative;
+    float: left;
+    color: #fff;
+    text-align: center;
+    line-height: 96px;
+}
+.d-none{
+    display: none;
+}
+.d-visible{
+    display: block;
+}
+@media (min-width: 768px) {
+    .container{
+        width: 768px;
+    }
+    .box{
+        width: 226px;
+        height: 226px;
+        margin: 15px;
+        line-height: 226px;
+    }
+    .d-md-none{
+        display: none;
+    }
+    .d-md-visible{
+        display: block;
+    }
+}
+@media (min-width: 1280px) {
+    .container{
+        width: 1280px;
+    }
+    .box{
+        width: 183px;
+        height: 183px;
+        line-height: 183px;
+        margin: 15px;
+    }
+    .d-lg-none{
+        display: none;
+    }
+    .d-lg-visible{
+        display: block;
+    }
+}
