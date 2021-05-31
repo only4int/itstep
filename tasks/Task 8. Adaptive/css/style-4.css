@@ -1,0 +1,10 @@
+.content{
+    width: 2000px;
+    height: 400px;
+    background: grey;
+}
+.box{
+    width: 90%;
+    height: 400px;
+    overflow-x: hidden;
+}
