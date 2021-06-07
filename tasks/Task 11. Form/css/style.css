@@ -177,7 +177,7 @@ div{
 .form-control-check,.form-control-radio{
     width: 100%;
 }
-.form-control-check:first-child, .form-control-radio:first-child{
+.form-control-check:nth-child(1), .form-control-radio:first-child{
     margin-top: 6px;
 }
 .form-control input[type="text"], .form-control input[type="password"], .form-control input[type="date"], 
@@ -188,11 +188,29 @@ select,.form-control input[type="file"]{
     border: 1px solid #bfbfbf;
     box-sizing: border-box;
 }
-.form-control input[type="submit"]{
+.error input[type="password"]{
+    border-color: red;
+}
+.error-text{
+    color: red;
+    padding: 5px 25px;
+    font-size: 12px;
+}
+.form-control button{
     width: 50%;
     padding: 5px 10px;
     border-radius: 5px;
     border: 1px solid #bfbfbf;
     box-sizing: border-box;
     background: #97f39f;   
+}
+.form-control button:hover{
+    background: green;
+}
+
+.form-control button:active{
+    background: red;
+}
+.form-control input[type="text"]:focus{
+    border:1px solid rgb(219, 89, 180);
 }

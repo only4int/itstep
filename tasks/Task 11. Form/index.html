@@ -44,7 +44,7 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="form-control">
-                                <input type="text" name="phone" id="phone" value="" placeholder="Введите телефон">
+                                <input type="text" name="phone" id="phone" value="" placeholder="Введите телефон" readonly>
                             </div>
                         </div>
                     </div>
@@ -54,9 +54,12 @@
                                 <label for="pass">Пароль:</label>
                             </div>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 error">
                             <div class="form-control">
                                 <input type="password" name="pass" id="pass" value="" placeholder="Введите пароль">
+                            </div>
+                            <div class="error-text">
+                                Короткий пароль
                             </div>
                         </div>
                     </div>
@@ -88,8 +91,7 @@
                                 </div>
                                 <div class="form-control-check">
                                     <input type="checkbox" name="hobby[]" id="hobby-3" value="hobby-3"><label for="hobby-3">Рисование</label>
-                                </div>
-                                
+                                </div>                       
                             </div>
                         </div>
                     </div>
@@ -124,8 +126,8 @@
                             <div class="form-control">
                                 <select name="sex" id="sex">
                                     <option value="0">Выберите пол</option>
-                                    <option value="f">Женский</option>
-                                    <option value="m">Мужской</option>
+                                    <option value="f" selected>Женский</option>
+                                    <option value="m" disabled>Мужской</option>
                                 </select>
                             </div>
                         </div>
@@ -147,7 +149,7 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="form-control">
-                                <input type="submit" name="submit" id="submit" value="Отправить">
+                                <button>Отправить</button>
                             </div>
                         </div>
                     </div>

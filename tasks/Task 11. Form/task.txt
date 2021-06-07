@@ -1,0 +1,1 @@
+Сверстать форму регистрации аккаунта в гугл https://accounts.google.com/signup/v2/webcreateaccount?hl=en&flowName=GlifWebSignIn&flowEntry=SignUp в состоянии вывода ошибок
