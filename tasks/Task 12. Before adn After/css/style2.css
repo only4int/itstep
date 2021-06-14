@@ -1,0 +1,43 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    position: relative;
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.form-row{
+    width: 100%;
+    position: relative;
+    padding: 10px 20px;
+}
+input{
+    display: none;
+}
+label::before{
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgb(136, 41, 41);
+    border-radius: 10px;
+    top: 8px;
+    left: -30px;
+}
+input:checked+label::after{
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: rgb(136, 41, 41);
+    border-radius: 5px;
+    top: 15px;
+    left: -23px;
+}
