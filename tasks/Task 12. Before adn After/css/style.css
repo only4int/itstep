@@ -1,0 +1,33 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-radio{
+    position: relative;
+    display: flex;
+}
+input{
+    display: none;
+}
+label::before{
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgb(136, 41, 41);
+    top: -4px;
+    left: -30px;
+}
+input:checked+label::after{
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: rgb(136, 41, 41);
+    top: 3px;
+    left: -23px;
+}
