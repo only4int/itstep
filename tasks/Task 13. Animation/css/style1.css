@@ -1,0 +1,79 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+}
+a{
+    position: fixed;
+    display: block;
+    color: #fff;
+    background: black;
+    padding: 15px 20px;
+    top: 40px;
+}
+.start{
+    left: calc(50% - 150px);
+}
+.end{
+    left: calc(50% + 30px);
+}
+.box{
+    width: 400px;
+    height: 400px;
+    background: chartreuse;
+    box-sizing: border-box;
+    border: 0px solid #456783;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.ball{
+    width: 100px;
+    height: 100px;
+    background: hotpink;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+#box:target{
+    animation: rotate 10s linear infinite;
+}
+#box:target .ball{
+    animation: run 4s linear infinite,rotate 4s linear 2;
+}
+@keyframes run{
+    0%{
+        top:0;
+        left: 0;
+    }
+    25%{
+        top:0;
+        left: 300px;
+    }
+    50%{
+        top:300px;
+        left: 300px;
+    }
+    75%{
+        top:300px;
+        left: 0;
+    }
+    100%{
+        top:0;
+        left: 0;
+    }
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
