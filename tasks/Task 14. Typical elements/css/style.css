@@ -36,3 +36,31 @@ ul.menu1 > li > a > span{
 ul.menu1 > li > a:hover{
     background: #003c84;
 }
+ul.menu1 > li:hover > a{
+    background: #003c84; 
+}
+ul.menu1 > li > ul{
+    list-style: none;
+    padding-left: 0;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 100%;
+    width: 300px;
+    padding: 20px 30px;
+    background: #003c84;
+    display: none;
+}
+ul.menu1 > li:hover > ul{
+    display: block;
+}
+ul.menu1 > li > ul > li > a{
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    font-weight: 600;
+}
+ul.menu1 > li > ul > li > a:hover{
+    background: aqua;
+}
