@@ -1,0 +1,38 @@
+menu{
+
+}
+ul.menu1{
+    list-style: none;
+    padding-left: 0;
+    width: 250px;
+}
+ul.menu1 > li{
+    position: relative;
+}
+ul.menu1 > li > a{
+    text-decoration: none;
+    padding: 0 20px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background: #006ab9;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+ul.menu1 > li:not(:last-child) > a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    height: 1px;
+    background: blue;
+}
+
+ul.menu1 > li > a > span{
+    line-height: 24px;
+}
+ul.menu1 > li > a:hover{
+    background: #003c84;
+}
