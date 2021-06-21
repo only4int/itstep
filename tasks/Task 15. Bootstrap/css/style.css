@@ -1,0 +1,64 @@
+body{
+    background: url("../img/pattern.png") repeat;
+}
+header{
+    background: #fff;
+}
+.logo{
+
+}
+.logo a{
+    
+}
+.logo img{
+    
+}
+.logo span{
+    
+}
+.head-contact{
+
+}
+.head-contact span{
+
+}
+.head-contact a{
+    
+}
+.main-menu{
+
+}
+.main-menu > li {
+    
+}
+.main-menu > li > a {
+    
+}
+.main-menu > li > a.active {
+    
+}
+.main-menu > li > a > span {
+    
+}
+.main-menu > li > ul {
+    
+}
+.main-menu > li > ul > li{
+    
+}
+.main-menu > li > ul > li > a {
+}   
+.main-menu > li > ul > li > a > span {
+    
+}
+.main-menu > li > ul > li > ul {
+    
+}
+.main-menu > li > ul > li > ul > li {
+    
+}
+.main-menu > li > ul > li > ul > li > a {
+}   
+.main-menu > li > ul > li > ul > li > a > span {
+    
+}
