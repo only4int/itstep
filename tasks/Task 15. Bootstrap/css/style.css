@@ -212,3 +212,15 @@ header{
     text-align: center;
     margin-bottom: 0;
 }
+
+.main-info{
+    position: relative;
+    padding: 40px 85px 65px;
+}
+.main-info .title h2{
+    text-align: left;
+}
+.review-item{
+    padding-left: 50px;
+    background: url(../img/quote.png) no-repeat 10px 10px;
+}
