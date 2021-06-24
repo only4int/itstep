@@ -21,7 +21,7 @@ header{
 .head-contact{
     font-size: 13px;
     display: flex;
-    justify-content: end;
+    float: right;
 }
 .head-contact span{
     color: #8c8c8c;
@@ -122,3 +122,93 @@ header{
     color: #fff;
     text-decoration: none;
 }   
+
+.main-slider .carousel-item{
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-position: center center;
+    background-size: 100% auto;
+}
+
+.main-slider .carousel-indicators button{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    padding: 0;
+    margin: 5px;
+    background: #fff;
+    border: 0;
+    opacity: 1;
+}
+.main-slider .carousel-indicators button.active, .main-slider .carousel-indicators button:hover{
+    background: #dc6511;
+}
+.wrapper{
+    background: #fff;
+    box-shadow: 0px 0px 50px 0px rgb(0 0 0 / 10%);
+    margin-bottom: 150px;
+    position: relative;
+    z-index: 10000;
+}
+@media (max-width:1169px){
+    .wrapper{
+        max-width: 100% !important;
+    }
+}
+@media (min-width:1170px){
+    .wrapper{
+        margin-top: -70px;
+    }
+    .main-slider .carousel-indicators{
+        margin-bottom: 100px;
+    }
+    .main-slider .carousel-item{
+        height: 542px;
+    }
+}
+.main-tech{
+    position: relative;
+    padding: 40px 85px 65px;
+}
+.title{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.title h2{
+    color: #595252;
+    font-size: 34px;
+    font-family: 'Asap', sans-serif;
+}
+.tech-item{
+    border: 1px solid #ddd;
+    padding: 25px 15px;
+    margin-bottom: 20px;
+}
+.tech-item-head{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.tech-item-pic{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.tech-item-pic img{
+    width: 100%;
+}
+.tech-item-text{
+    font-size: 11px;
+    line-height: 20px;
+}
+.tech-item-text h4{
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0;
+    line-height: 20px;
+}
+.tech-item-text p{
+    text-align: center;
+    margin-bottom: 0;
+}
