@@ -224,3 +224,97 @@ header{
     padding-left: 50px;
     background: url(../img/quote.png) no-repeat 10px 10px;
 }
+
+footer{
+    position: relative;
+}
+.footer-logo{
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+.footer-menu ul{
+    list-style: none;
+    padding-left: 0;
+}
+.footer-menu ul li{
+    margin-right: 20px;
+}
+.footer-menu ul li a{
+    color: #4e4e4e;
+    font-size: 12px;
+    text-decoration: none;
+}
+.footer-menu ul li.active a, .footer-menu ul li:hover a{
+    color: #e17a31;
+}
+.copyright a{
+    color: #4b4b4b;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.soc-links > span{
+    color: #4b4b4b;
+    font-size: 11px;
+    display: block;
+}
+.soc-links ul{
+    list-style: none;
+}
+.soc-links ul li{
+    margin-right: 10px;
+}
+.soc-links ul li a{
+    text-decoration: none;
+}
+.soc-links ul li a img{
+    
+}
+.soc-links ul li a:hover img{
+    opacity: 0.5;
+}
+@media (max-width: 767px) {
+    footer{
+        padding-top: 20px;
+    }
+    footer > .row{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .soc-links > *{
+        width: 100%;
+        padding-left: 0;
+    }
+    .soc-links span{
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .soc-links ul{
+        justify-content: center;
+    }
+    .copyright, .footer-logo{
+        text-align: center;
+    }
+    .copyright{
+        margin-bottom: 25px;
+    }
+}
+footer::before{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: calc(100% + 24px);
+    top:0;
+    left:-12px;
+    background: #ddd;
+}
+@media (min-width: 768px){
+    footer{
+        padding: 40px 15px 65px;
+    }
+} 
+@media (min-width: 1170px){
+    footer{
+        padding: 40px 85px 65px;
+    }
+} 
