@@ -1,0 +1,36 @@
+
+@import "config";
+
+body{
+    font-size: $font;
+    p{
+        color: #fff;
+        span{
+            background: #235235;
+        }
+    }
+    em{
+        font-weight: 900;
+        @include large_font(20px);
+    }
+}
+ul{
+    list-style: none;
+    >li{
+        padding-left: 10px;
+        >a{
+            color: $black;
+            > span{
+                font-size: 14px;
+                @include large_font;
+            }
+        }
+        >ul{
+            >li{
+                >a{
+                    color: $black;
+                }
+            }
+        }
+    }
+}

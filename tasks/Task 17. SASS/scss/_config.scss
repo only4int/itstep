@@ -1,0 +1,9 @@
+$base_color: #fff;
+$black: #000;
+$font: 14px;
+
+@mixin large_font($font1:17px,$color:#fff) {
+    font-size: $font1*2;
+    font-weight: 700;
+    font-style: italic;
+}
