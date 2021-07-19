@@ -1,0 +1,159 @@
+.slider {
+  background: url("../img/bg-img-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; }
+@media (min-width: 320px) {
+  .slider {
+    padding-top: 30px;
+    padding-bottom: 120px; } }
+@media (min-width: 1170px) {
+  .slider {
+    padding-top: 161px;
+    padding-bottom: 100px; } }
+
+.slider-title h1 {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #fff;
+  text-align: center; }
+@media (min-width: 1170px) {
+  .slider-title h1 {
+    text-align: left; } }
+
+.slider-self {
+  position: relative; }
+.slider-self .carousel-caption p {
+  color: #fff;
+  text-align: center;
+  font-size: 32px;
+  width: 100%; }
+@media (min-width: 1170px) {
+  .slider-self .carousel-caption p {
+    font-size: 46px;
+    width: 50%;
+    text-align: left; } }
+.slider-self .carousel-inner {
+  position: relative; }
+.slider-self .carousel-inner .carousel-item {
+  position: relative; }
+.slider-self .carousel-inner .carousel-item .carousel-caption {
+  position: relative;
+  left: 0;
+  top: 0;
+  font-weight: 700; }
+.slider-self .carousel-control-prev, .slider-self .carousel-control-next {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 40px;
+  background: rgba(161, 169, 172, 0.5);
+  color: #fff;
+  position: absolute;
+  opacity: 1; }
+.slider-self .carousel-control-prev:hover, .slider-self .carousel-control-next:hover {
+  background: #516fb5; }
+.slider-self .carousel-control-prev {
+  left: calc(50% - 85px);
+  top: calc(100% + 102px); }
+@media (min-width: 1170px) {
+  .slider-self .carousel-control-prev {
+    right: 90px;
+    top: 100%;
+    left: auto; } }
+.slider-self .carousel-control-next {
+  left: calc(50% + 5px);
+  top: calc(100% + 102px); }
+@media (min-width: 1170px) {
+  .slider-self .carousel-control-next {
+    right: 0;
+    top: 100%;
+    left: auto; } }
+
+.slider-button a {
+  min-width: 240px;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 25px 10px 27px;
+  letter-spacing: 1.1px;
+  text-decoration: none;
+  text-align: center;
+  background: #365699;
+  display: inline-block; }
+
+.slider-button a:hover {
+  background: #516fb5; }
+
+@media (min-width: 1170px) {
+  .review .carousel {
+    margin-top: -45px; } }
+
+.review-slider {
+  padding: 0;
+  position: relative; }
+.review-slider .title {
+  z-index: 20000;
+  color: #000;
+  text-align: center;
+  width: 100%;
+  position: relative; }
+@media (min-width: 1170px) {
+  .review-slider .title {
+    position: absolute;
+    top: 42px; } }
+.review-slider .title h2 {
+  font-size: 36px;
+  font-weight: 700; }
+.review-slider .carousel-control-prev, .review-slider .carousel-control-next {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 40px;
+  background: rgba(161, 169, 172, 0.5);
+  color: #fff;
+  position: absolute;
+  opacity: 1; }
+.review-slider .carousel-control-prev:hover, .review-slider .carousel-control-next:hover {
+  background: #516fb5; }
+@media (min-width: 1170px) {
+  .review-slider .carousel-control-prev {
+    top: calc(100% - 110px);
+    left: 50%; } }
+@media (min-width: 1170px) {
+  .review-slider .carousel-control-next {
+    top: calc(100% - 110px);
+    left: calc(50% + 90px); } }
+.review-slider .carousel-item img {
+  position: relative; }
+@media (min-width: 1170px) {
+  .review-slider .carousel-item img {
+    position: absolute; } }
+.review-slider .carousel-item .carousel-caption {
+  top: 32%;
+  position: relative; }
+@media (min-width: 1170px) {
+  .review-slider .carousel-item .carousel-caption {
+    position: absolute; } }
+.review-slider .carousel-item .carousel-caption .review-text {
+  background: #fff;
+  padding: 40px 30px 60px;
+  font-size: 21px;
+  line-height: 1.3;
+  text-align: left; }
+.review-slider .carousel-item .carousel-caption .review-author {
+  right: 0%;
+  position: absolute;
+  font-size: 26px;
+  line-height: 1.92308;
+  font-weight: 700;
+  color: #365699;
+  bottom: 12%;
+  font-style: normal !important; }
+.review-slider .carousel-item .carousel-caption q {
+  color: #000; }
+
+/*# sourceMappingURL=main.css.map */
