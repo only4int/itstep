@@ -1,0 +1,49 @@
+.catalog_list {
+    padding: 50px 0;
+    background: $bgcolor;
+  
+    .row > div > div {
+        background: $white;
+        margin: 20px 0;
+        padding: 20px;
+        box-shadow: 0 5px 5px 0 rgba(32, 32, 32, 0.05);
+    
+        > a {
+            color: $black;
+            font-size: 18px;
+    
+            &:hover {
+            color: $blue;
+            }
+        }
+    }
+}
+  
+.sub-list {
+    height: 230px;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+  
+    li {
+      line-height: 32px;
+      color: $black;
+  
+        a {
+            color: $black;
+    
+            &:hover {
+            color: $blue;
+            }
+        }
+    }
+}
+  
+.view-more {
+    text-align: center;
+    margin-top: 20px;
+    
+    a {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,219 @@
+.top-container {
+    display: block;
+    height: 50px;
+    border-bottom: 1px solid $bgcolor;
+  
+    .row {
+        position: relative;
+    }
+}
+  
+.top-item {
+    > a {
+        margin: 14px 0px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: $black;
+  
+        i {
+            margin-right: 15px;
+            color: $blue;
+            font-size: 18px;
+        }
+    }
+  
+    .dropdown {
+        > a {
+            display: flex;
+            margin: 15px 0;
+            text-decoration: none;
+            color: $black;
+  
+            &:hover {
+                color: $gray;
+                text-decoration: none;
+            }
+        }
+  
+        > a i {
+            color: $blue;
+            margin-left: 15px;
+            margin-top: 3px;
+        }
+  
+        a:hover {
+            color: $gray;
+        }
+    }
+  
+    > a:hover {
+        color: $gray;
+        text-decoration: none;
+    }
+  
+    .dropdown-menu {
+        top: 32px;
+        padding: 0;
+        margin: 0;
+    }
+  
+    .dropdown .dropdown-toggle::after {
+        display: none;
+    }
+  
+    .dropdown-menu ul {
+        box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+        list-style: none;
+        padding: 0;
+        margin: 0;
+  
+        li {
+            min-width: 180px;
+  
+            a {
+                display: block;
+                padding: 10px 20px;
+                background: $black;
+                cursor: pointer;
+                color: $black;
+            }
+  
+            &:hover {
+                background: $blue;
+                color: $white;
+            }
+        }
+    }
+}
+  
+.toplinks {
+    line-height: normal;
+    padding: 0px 0 0;
+
+    @media (max-width: 575px) {
+        padding-right: 10px;
+    }
+
+    .links {
+        text-align: right;
+        
+        @media (max-width: 575px) {
+            font-size: 20px;
+            line-height: 24px;
+        }
+        
+        > div {
+            display: inline-block;
+        }
+    }
+  
+    div.links div.toplink_el {
+        > a {
+            color: $black;
+            display: inline-block;
+            padding: 0px;
+            color: $black;
+            font-size: 12px;
+            padding-left: 5px;
+            padding-right: 5px;
+            font-weight: normal;
+            text-decoration: none;
+            position: relative;
+
+            @media (max-width: 575px) {
+                padding: 0;
+            }
+        }
+  
+        .basket {
+            > a {
+                color: $black;
+                display: inline-block;
+                padding: 0px;
+                color: $black;
+                font-size: 12px;
+                padding-left: 5px;
+                padding-right: 5px;
+                font-weight: normal;
+                text-decoration: none;
+                position: relative;
+                @media (max-width: 575px) {
+                    padding: 0;
+                }
+            }
+  
+            > a > .fas {
+                font-size: 18px;
+                @media (max-width: 575px) {
+                    font-size: 20px;
+                }
+            }
+  
+            > a:hover {
+            color: $gray !important;
+            text-decoration: none;
+            }
+        }
+  
+        > a > .fas {
+            font-size: 18px;
+            @media (max-width: 575px) {
+                font-size: 20px;
+            }
+        }
+  
+        > a:hover {
+            color: $gray !important;
+            text-decoration: none;
+        }
+  
+        .badge-count {
+            background-color: $error;
+            font-size: 10px;
+            padding: 2px 5px;
+            position: absolute;
+            right: -10px;
+            top: -10px;
+            color: $white;
+            border-radius: 50%;
+        }
+    }
+}
+
+.lang-swticher {
+    position: absolute;
+    
+    ul {
+        list-style: none;
+        padding-left: 5px;
+      
+        li {
+            display: inline-block;
+            margin: 14px 5px;
+            text-transform: uppercase;
+        
+            &.active {
+                background: $blue;
+            }
+      
+            span {
+                color: $white;
+                padding: 5px;
+            }
+      
+            a {
+                color: $black;
+        
+                &:hover {
+                color: $blue;
+                }
+            }
+        }
+    }
+}
+  
+.top-container .lang-swticher {
+    right: 0;
+}
+  

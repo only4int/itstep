@@ -1,0 +1,49 @@
+  
+@media (min-width: 768px) {
+    #slide-project {
+        .carousel-inner .carousel-item {
+            align-items: unset;
+    
+            &.active {
+            display: flex;
+            }
+        }
+  
+        .carousel-control-prev {
+            cursor: pointer;
+            height: 50px;
+            opacity: 1;
+            position: absolute;
+            width: 50px;
+            z-index: 100;
+            margin-top: -22px;
+            text-align: center;
+            color: $blue;
+            top: 50%;
+            left: -30px;
+            }
+    
+        .carousel-control-next {
+            cursor: pointer;
+            height: 50px;
+            opacity: 1;
+            position: absolute;
+            width: 50px;
+            z-index: 100;
+            margin-top: -22px;
+            text-align: center;
+            color: $blue;
+            top: 50%;
+            right: -30px;
+        }
+    
+        .carousel-control-prev i, .carousel-control-next i {
+            font-size: 50px;
+            line-height: 50px;
+        }
+    
+        .carousel-control-prev:hover, .carousel-control-next:hover {
+            color: $gray;
+        }
+    }
+} 

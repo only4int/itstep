@@ -1,0 +1,99 @@
+.main-carousel {
+    
+    .container {
+        @media only screen and (max-width: 800px) {
+            width: 100%;
+        }
+    }
+
+    .carousel-inner {
+      margin-top: 0px;
+    }
+  
+    .carousel-caption {
+        left: 0;
+        right: 0;
+        text-align: left;
+        top: 20px;
+  
+        h2 {
+            font-weight: bold;
+            font-size: 32px;
+
+            @media only screen and (max-width: 767px) {
+                font-size: 24px;
+            }
+        }
+    }
+  
+    .carousel-item {
+        height: 300px;
+  
+        img {
+            width: 100%;
+
+            @media only screen and (max-width: 991px) {
+                height: 100%;
+                width: auto;
+                position: absolute;
+                left: -5%;
+                right: -5%;
+                max-width: none !important;
+            }  
+
+            @media only screen and (max-width: 400px) {
+                left: -20%;
+                right: -20%;         
+            }  
+        }
+
+        @media (min-width: 768px) {
+            height: 250px;
+        }
+
+        @media only screen and (max-width: 767px) {
+            height: 350px !important;
+        }
+
+        @media only screen and (max-width: 991px) {
+            height: 300px;
+        }
+    }
+  
+    .carousel-control {
+        cursor: pointer;
+        height: 45px;
+        opacity: 1;
+        position: absolute;
+        width: 45px;
+        z-index: 100;
+        margin-top: -22px;
+        border: 1px solid #fff;
+        text-align: center;
+        color: #fff;
+    
+        &:hover {
+            opacity: 0.5;
+        }
+    
+        &.a-left {
+            right: 60px !important;
+            top: (-37px) !important;
+            left: auto;
+        }
+    
+        &.a-right {
+            right: 5px !important;
+            top: (-37px) !important;
+            left: auto;
+        }
+  
+        i {
+            font-size: 32px;
+            line-height: 45px;
+        }
+    }
+}
+.control-container {
+    position: relative;
+}   

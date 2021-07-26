@@ -15,3 +15,7 @@ $black: #000;
     text-decoration: none;
     text-align: center;
 }
+@mixin fa($symbol:""){
+    content: $symbol;
+    font-family: "Font Awesome 5 Free";
+}

@@ -1,0 +1,69 @@
+footer {
+    p {
+        padding: 0 0 10px;
+        font-size: 12px;
+        margin: 0;
+        color: $white;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        line-height: 20px;
+    }
+  
+    .footer-column a {
+        display: inline-block;
+        color: $gray;
+    }
+  
+    a {
+        line-height: normal;
+        color: $gray;
+
+        &:hover {
+            color: $white;
+            text-decoration: none;
+        }
+    }
+    
+    address {
+        display: block;
+        margin: auto;
+        font-style: normal;
+        line-height: 35px;
+        color: $gray;
+        padding-top: 5px;
+        margin-top: 15px;
+        margin-bottom: 30px;
+        font-size: 13px;
+        border: none;
+        letter-spacing: 0.5px;
+        margin-top: 10px;
+        text-align: left;
+  
+        i {
+            border: 2px $gray solid;
+            width: 35px !important;
+            line-height: 33px !important;
+            display: inline-block !important;
+            height: 35px !important;
+            text-align: center;
+            border-radius: 25px;
+            margin-right: 5px !important;
+            vertical-align: top;
+            margin-bottom: 10px;
+
+            @media (min-width: 768px) {
+                margin-left: 20px !important;
+            }
+        }
+  
+        .fa-envelope {
+            font-size: 14px;
+        }
+    }
+}
+  
+
+  
+
+  

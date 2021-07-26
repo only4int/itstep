@@ -1,0 +1,94 @@
+/* style icons fonts FontAwesome */
+.fab,.far,.fas{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1;}
+.fab{font-family:"Font Awesome 5 Brands";}
+.far{font-weight:400;}
+.far,.fas{font-family:"Font Awesome 5 Free";}
+.fas{font-weight:900;}
+.fa-calendar-alt:before{content:"\f073";}
+.fa-chevron-down:before{content:"\f078";}
+.fa-chevron-left:before{content:"\f053";}
+.fa-map:before{content:"\f279";}
+.fa-map-marker-alt:before{content:"\f3c5";}
+.fa-paperclip:before{content:"\f0c6";}
+.fa-question-circle:before{content:"\f059";}
+.fa-shopping-cart:before{content:"\f07a";}
+.fa-times:before{content:"\f00d";}
+.fa-chevron-up:before{content:"\f077";}
+.fa-instagram:before{content:"\f16d";}
+.fa-angle-down:before{content:"\f107";}
+.fa-bars:before{content:"\f0c9";}
+.fa-clock:before{content:"\f017";}
+.fa-comments:before{content:"\f086";}
+.fa-envelope:before{content:"\f0e0";}
+.fa-phone:before{content:"\f095";}
+.fa-chevron-right:before{content:"\f054";}
+.fa-exchange-alt:before{content:"\f362";}
+.fa-linkedin-in:before{content:"\f0e1";}
+.fa-mobile-alt:before{content:"\f3cd";}
+.fa-th:before{content:"\f00a";}
+.fa-th-list:before{content:"\f00b";}
+.fa-times-circle:before{content:"\f057";}
+.fa-user:before{content:"\f007";}
+.fa-clipboard-list:before{content:"\f46d";}
+.fa-facebook-f:before{content:"\f39e";}
+.fa-file-pdf:before{content:"\f1c1";}
+.fa-minus:before{content:"\f068";}
+.fa-plus:before{content:"\f067";}
+.fa-print:before{content:"\f02f";}
+.fa-search:before{content:"\f002";}
+.fa-truck:before{content:"\f0d1";}
+.fa-facebook-square:before{content:"\f082"; color:#3b5998;}
+// .fa-linkedin:before{content:"\f08c";  color:#0e76a8;}
+// .fa-linkedin-in:before{content:"\f0e1"; color:#0e76a8;}
+
+.fa-link:before{content:"\f0c1"}
+.fa-twitter:before{content:"\f099"}
+.fa-instagram:before{content:"\f16d"}
+.fa-youtube:before{content:"\f167"}
+.fa-youtube-square:before{content:"\f431"}
+.fa-pinterest:before{content:"\f0d2"}
+.fa-pinterest-p:before{content:"\f231"}
+.fa-pinterest-square:before{content:"\f0d3"}
+.fa-linkedin:before{content:"\f08c"}
+
+.fa-thumbs-up:before{content:"\f164"}
+.fa-comment:before{content:"\f075"}
+.fa-paper-plane:before{content:"\f1d8"}
+.fa-share:before{content:"\f064"}
+
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/FontAwesome/fa-brands-400.eot");
+  src: url("../fonts/FontAwesome/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../fonts/FontAwesome/fa-brands-400.woff2") format("woff2"), url("../fonts/FontAwesome/fa-brands-400.woff") format("woff"), url("../fonts/FontAwesome/fa-brands-400.ttf") format("truetype"), url("../fonts/FontAwesome/fa-brands-400.svg#fontawesome") format("svg"); 
+  font-display: block;
+}
+
+.fab {
+  font-family: 'Font Awesome 5 Brands'; }
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/FontAwesome/fa-regular-400.eot");
+  src: url("../fonts/FontAwesome/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../fonts/FontAwesome/fa-regular-400.woff2") format("woff2"), url("../fonts/FontAwesome/fa-regular-400.woff") format("woff"), url("../fonts/FontAwesome/fa-regular-400.ttf") format("truetype"), url("../fonts/FontAwesome/fa-regular-400.svg#fontawesome") format("svg"); 
+  font-display: block;
+}
+
+.far {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 400; }
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/FontAwesome/fa-solid-900.eot");
+  src: url("../fonts/FontAwesome/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../fonts/FontAwesome/fa-solid-900.woff2") format("woff2"), url("../fonts/FontAwesome/fa-solid-900.woff") format("woff"), url("../fonts/FontAwesome/fa-solid-900.ttf") format("truetype"), url("../fonts/FontAwesome/fa-solid-900.svg#fontawesome") format("svg"); 
+  font-display: block;
+}
+
+.fa,
+.fas {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900; }

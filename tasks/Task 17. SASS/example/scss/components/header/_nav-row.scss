@@ -1,0 +1,185 @@
+nav {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    z-index: 99;
+    background: $black;
+}
+  
+.nav-inner {
+    position: relative;
+    border-bottom: none;
+}
+
+.nav-block {
+    margin-top: 0;
+    margin-bottom: 0;
+    
+    &-center {
+        margin-top: 0px;
+      }
+}
+
+#nav {
+    z-index: 10;
+    padding: 0;
+    margin: auto;
+    text-align: left;
+    display: inline;
+    
+    > li {
+        position: static;
+        list-style: none;
+        border-bottom: none;
+        display: inline-block;
+        margin-left: -3px;
+        
+        > a {
+            color: $white;
+            display: block;
+            padding: 15px 0px;
+            font-size: 12px;
+            font-weight: 700;
+            position: relative;
+            letter-spacing: 1px;
+            box-shadow: inset 0 0 0 0 $white;
+            text-transform: uppercase;
+    
+            > span {
+                display: inline-block;
+                padding: 0 18px;
+            }
+        }
+    
+        &:hover > a {
+            color: $white;
+            border-bottom: none;
+            background: inherit;
+            border-bottom: 4px solid $white;
+            padding-bottom: 11px;
+            position: relative;
+            z-index: 1;
+        }
+
+        &:hover .level0-wrapper {
+            transition: all 0.1s ease-in-out 0s;
+            z-index: 1;
+        }
+
+        &:last-child > a {
+            color: $error;
+
+            > span {
+                border-right: 0;
+            }
+        }
+        &:first-child {
+            margin-left: 0px;
+        }
+    }
+
+    li {
+        text-align: left;
+        list-style: none;
+        padding: 5px 0;
+
+        a {
+            display: block;
+            text-decoration: none;
+        }
+    }
+
+    ul.level0 {
+        padding: 0;
+
+        > li {
+            width: 22%;
+            display: inline-block;
+            float: none;
+            margin-right: 20px;
+            padding-bottom: 20px;
+            padding-top: 0;
+            vertical-align: top;
+
+            > a {
+                color: $black;
+                font-size: 13px;
+                font-weight: bold;
+                line-height: 18px;
+                padding: 5px 0px;
+                letter-spacing: 2px;
+                margin-bottom: 8px;
+                text-transform: uppercase;
+        
+                &:after {
+                    content: "";
+                    height: 1px;
+                    width: 25px;
+                    background: $blue;
+                    display: block;
+                    margin-top: 12px;
+                }
+              }
+        }
+    }
+
+    ul.level1 {
+        padding: 0px;
+        position: static;
+
+        > li a {
+            color: $black;
+            font-size: 13px;
+            letter-spacing: normal;
+            letter-spacing: 0.5px;
+      
+            &:hover {
+                text-decoration: underline;
+                font-weight: bold;
+                color: $blue;
+            }
+        }
+    }
+    
+    .level0-wrapper {
+        border: 0 none;
+        padding: 15px 0px;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+        z-index: 10000;
+        opacity: 0;
+        visibility: visible;
+        left: 0px;
+        top: 47px;
+        height: 480px;
+        background: $white;
+        border-top: none;
+        box-shadow: 0 5px 10px -8px;
+        width: 100%;
+    }
+
+    .level0-wrapper2 {
+        padding: 5px 0px;
+        
+        .col-2 {
+            padding: 0;
+            float: left;
+            width: 31%;
+        }
+
+        &:before {
+            display: table;
+            line-height: 0;
+            content: "";
+        }
+    
+        &:after {
+            display: table;
+            line-height: 0;
+            content: "";
+            clear: both;
+        }
+    }
+}

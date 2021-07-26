@@ -1,0 +1,13 @@
+.site-reviews {
+    margin: 20px 0;
+    color: $white;
+  
+    a {
+        color: $gray;
+  
+        &:hover {
+            color: $white;
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,76 @@
+.special {
+        background: $bgcolor;
+        padding: 50px 0;
+}
+
+.special-info {
+    h2 {
+        font-size: 24px;
+        margin: 20px 0;
+    }
+  
+    p {
+        font-size: 14px;
+    }
+}
+  
+.special-form {
+    input[type='text'] {
+        padding: 8px 21px 9px 0;
+        margin: 0 0 21px 0;
+        width: 100%;
+        box-sizing: border-box;
+        border: none;
+        border-bottom: 1px solid $black;
+        background-color: transparent;
+        font-size: 16px;
+        line-height: 27px;
+        color: $black;
+        text-indent: 0px;
+        outline: none;
+    }
+  
+    textarea {
+      padding: 8px 21px 9px 0;
+      margin: 0 0 21px 0;
+      width: 100%;
+      box-sizing: border-box;
+      border: none;
+      border-bottom: 1px solid $black;
+      background-color: transparent;
+      font-size: 16px;
+      line-height: 27px;
+      color: $black;
+      text-indent: 0px;
+      outline: none;
+      height: 130px;
+    }
+  
+    button {
+        border: 1px solid $blue;
+        color: $white;
+        display: inline-block;
+        font-size: 11px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        padding: 8px 20px;
+        text-transform: uppercase;
+        background: $blue;
+        cursor: pointer;
+    
+        &:hover {
+            background: $white;
+            color: $blue;
+        }
+    }
+  
+    .attach {
+        margin-bottom: 20px;
+    }
+  
+    p {
+        padding: 30px 0 0;
+        font-size: 12px;
+    }
+}
+  

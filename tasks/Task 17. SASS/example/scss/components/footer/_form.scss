@@ -1,0 +1,70 @@
+
+  button.subscribe
+  
+.newsletter-wrap {
+    display: inline-block;
+    width: 100%;
+    
+    button.subscribe {
+        border: 0 none;
+        filter: none;
+        overflow: hidden;
+        padding: 5px 15px;
+        cursor: pointer;
+        font-weight: 700;
+        border-radius: 0px;
+        color: $white;
+        border: 1px $blue solid;
+        background: $blue;
+        float: right;
+        height: 39px;
+        width: 36%;
+        
+        &:before {
+            content: "\f0e0";
+            font-family: "Font Awesome 5 Free";
+            font-size: 13px;
+            font-weight: 400;
+            padding-right: 8px;
+            color: $white;
+        }
+
+        &:hover {
+            background: $white;
+            border: 0 none;
+            color: $blue;
+            filter: none;
+            overflow: hidden;
+            padding: 7px 15px;
+        }
+    
+        span {
+            color: $white;
+            font-size: 12px;
+        }
+    }
+  
+    input[type="text"] {
+        background: $white;
+        height: auto;
+        display: inline-block;
+        color: $gray;
+        line-height: 23px;
+        background-color: $white;
+        border: none;
+        font-size: 13px;
+        border: none;
+        padding: 7px 10px;
+        width: 64%;
+        border: 1px $gray solid;
+
+        &:focus {
+            background: $white;
+            border-color: $gray;
+        }
+        
+        @media screen and (max-width: 991px) {
+            width: 60%;
+        }
+    }
+}

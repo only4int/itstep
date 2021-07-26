@@ -1,0 +1,55 @@
+.our-features-box {
+    overflow: hidden;
+    width: 100%;
+    margin: auto;
+    padding: 20px 0 30px;
+    background: $black;
+  
+    .feature-box {
+        overflow: hidden;
+        font-size: 13px;
+        line-height: 1.4em;
+        font-weight: normal;
+        text-transform: uppercase;
+        padding: 0px;
+  
+        p {
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            margin-bottom: 3px;
+            margin-top: 5px;
+            color: $white;
+            text-transform: uppercase;
+    
+            a {
+                font-size: 12px;
+                font-weight: 900;
+                letter-spacing: 1px;
+                margin-bottom: 3px;
+                margin-top: 5px;
+                color: $white;
+                text-transform: uppercase;
+            }
+        }
+  
+    .content {
+        display: inline-block;
+        text-align: left;
+        text-transform: none;
+        color: $white;
+  
+        p {
+            margin: 0px;
+        }
+    }
+  
+    i {
+        display: inline-block;
+        font-size: 16px;
+        padding-top: 5px;
+        margin-right: 10px;
+        color: $white;
+        }
+    }
+}

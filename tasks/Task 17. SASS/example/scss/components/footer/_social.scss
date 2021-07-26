@@ -1,0 +1,47 @@
+.social {
+    overflow: hidden;
+    padding-top: 30px;
+  
+    a {
+        border-radius: 20px;
+        color: $gray;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border: 1px $gray solid;
+        font-size: 18px;
+        text-align: center;
+        padding: 0;
+        display: inline-block !important;
+    
+        &:hover {
+            color: $white !important;
+        }
+    }
+  
+    ul {
+        margin: 0;
+        list-style: none;
+        padding: 0px;
+    
+        li {
+            margin-right: 10px;
+            border: none;
+            float: left;
+    
+            &:last-child {
+            border-bottom: none;
+            }
+        }
+    }
+  
+    a {
+        transition: background 400ms ease-in-out;
+    }
+
+    @each $mess, $color in $social {
+        .#{$mess} a:hover{
+          background: $color !important;
+        }
+    }
+}

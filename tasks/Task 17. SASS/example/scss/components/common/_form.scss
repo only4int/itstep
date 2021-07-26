@@ -1,0 +1,50 @@
+.btn {
+  border: 1px solid $blue;
+  border-radius: 0;
+  color: #fff;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  padding: 8px 20px;
+  text-transform: uppercase;
+  background: $blue;
+
+  &:hover {
+    background: $white;
+    color: $blue;
+  }
+}
+.btn-arrow:after {
+  color: $white;
+  content: "\f061";
+  display: inline-block !important;
+  font-family: "Font Awesome 5 Free";
+  font-size: 14px;
+  margin-left: 10px;
+  &:hover {
+    color: $blue;
+  }
+}
+  
+.form-success p {
+  font-size: 14px;
+  color: $blue;
+  font-weight: bold;
+}
+.attach {
+  label {
+      cursor: pointer;
+      color: $blue;
+  }
+
+  .inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+}

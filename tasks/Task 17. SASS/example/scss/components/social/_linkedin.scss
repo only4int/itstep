@@ -1,0 +1,151 @@
+@import "../config";
+
+
+.linkedin-widget{
+    justify-content: space-between;
+
+    .col-linkedin{
+        margin-top: 15px;
+    }
+
+    .linkedin-news:hover{
+        .right{
+            a{
+                color: $blue;
+            }
+        }
+    }
+
+    .linkedin-news{
+        border-radius: 10px;
+        border: 2px solid $bgcolor;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        position: relative;
+
+        a{
+            text-decoration: none;
+            color: $gray;
+            cursor: pointer;
+        }
+
+        a:hover{
+            color: $blue;
+        }
+
+        .in-head{
+            flex: 0 0 auto;
+            display: flex;
+            flex-direction: row;
+
+            .logo-left{
+                img{
+                    width: 50px;
+                } 
+            }
+
+            .logo-right{
+                width: 100%;
+                margin-left: 10px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .left{
+                    display: flex;
+                    flex-direction: column;
+                    
+                    h4{
+                        display: inline;
+                        font-size: 16px;
+                        font-weight: 400px;
+                        a{
+                            color: $black;
+                        }
+                        a:hover{
+                            color: $blue;
+                        }
+                    }
+                    span{
+                        font-size: 12px;
+                        font-weight: 400;
+                    }
+                }
+
+                .right{
+                    a{
+                        font-size: 18px;
+                        padding-left: 10px;
+                    }
+                }      
+            }
+        }
+
+        .in-body{
+            font-size: 12px !important;
+            margin-top: 10px;
+            flex: 1 0 auto;
+
+            p{
+                font-size: 12px !important;
+            }
+
+            .picture{ 
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+                img{
+                    max-width: 100%;
+                    max-height: 170px;
+                }
+            }
+
+            .link{
+                background-color: $gray;
+                padding: 5px;
+
+                p{
+                    padding-left: 5px;
+                    padding-right: 5px;
+                    padding-top: 5px;
+                    font-size: 12px;
+                    margin: 0px;
+                    color: $black;
+                }
+            }
+
+            a{
+                font-size: 12px !important;
+                color: $blue !important;
+            }
+            a:hover{
+                color: $gray !important;
+            }      
+        }
+
+        .in-foother{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+            padding-top: 5px;
+            flex: 0 0 auto;
+            
+            a{
+                font-size: 14px;
+                padding-right: 20px;
+            }
+
+            a:hover{
+                color: $blue;
+            }            
+        }
+    }
+}

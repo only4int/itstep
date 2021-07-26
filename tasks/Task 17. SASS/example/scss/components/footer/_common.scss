@@ -1,0 +1,113 @@
+footer {
+    padding: 0;
+    overflow: hidden;
+    padding-top: 10px;
+    background-color: $black;
+  
+    ul {
+      margin: 0px;
+      padding: 0px;
+      margin-bottom: 15px;
+  
+        li {
+            list-style-type: none;
+    
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+  
+    a {
+      padding-top: 7px;
+      padding-bottom: 7px;
+      font-size: 13px;
+    }
+  
+    .footer-inner {
+        margin: auto;
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+  
+    .footer-column a:before {
+        content: "\f054";
+        font-family: "Font Awesome 5 Free";
+        font-size: 11px;
+        font-weight: 900;
+        display: inline-block !important;
+        cursor: pointer;
+        line-height: 20px;
+        color: $gray;
+        margin-right: 5px;
+    }
+}
+  
+.footer-column-last {
+    margin-right: 0px;
+    margin-bottom: 15px;
+    padding-left: 0px;
+  
+    li {
+        padding: 0 0 5px;
+    }
+}
+  
+@media only screen and (max-width: 767px) {
+    .footer-inner .panel-group {
+        margin-bottom: 5px;
+  
+        .panel {
+            background-color: transparent;
+        }
+  
+        .panel-title {
+            padding: 0 0 10px;
+            font-size: 12px;
+            margin: 0;
+            color: $white;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            outline: none;
+            display: block;
+            position: relative;
+    
+            &:before {
+                font-family: "Font Awesome 5 Free";
+                content: "\f067";
+                font-weight: 700;
+                position: absolute;
+                right: 0px;
+            }
+        }
+  
+        .panel {
+            .panel-body {
+                padding: 0px;
+                margin-bottom: 15px;
+            }
+  
+            .panel-collapse a {
+                padding-top: 7px;
+                padding-bottom: 7px;
+                font-size: 13px;
+                display: inline-block;
+        
+                &:before {
+                    font-family: "Font Awesome 5 Free";
+                    content: "\f054";
+                    font-weight: 700;
+                    font-size: 11px;
+                    display: inline-block !important;
+                    cursor: pointer;
+                    line-height: 20px;
+                    color: $gray;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+  

@@ -1,0 +1,34 @@
+.text-index {
+    padding: 10px 0;
+    color: $black;
+  
+    p {
+      font-size: 14px;
+    }
+  
+    ul {
+        padding-left: 0;
+
+        li {
+            font-size: 14px;
+            display: inline-block;
+            width: 100%;
+    
+            &:before {
+            font-family: "Font Awesome 5 Free";
+            content: "\f00c";
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 700;
+            margin-right: 10px;
+            color: $blue;
+            }
+            @media (min-width: 768px) {
+                width: 49%;
+            }
+            @media (min-width: 1200px) {
+                width: 33%;
+            }
+        }  
+    }
+}
