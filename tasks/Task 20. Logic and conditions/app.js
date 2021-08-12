@@ -44,8 +44,44 @@ else if(b > a)
 else
     console.log("equal");
 
-if (condition) {
-    
+// четное или нечетное число
+let number = 4;
+if (number % 2 == 0) {
+    console.log("even")
 } else {
-    
+    console.log("odd")
 }
+
+//високосный или невисокосный
+let year = 2010;
+if(year % 400 == 0 || year % 4 == 0 && year % 100 != 0){
+    console.log("leap");
+} else {
+    console.log("common");
+}
+
+// грибы
+let mushrooms = 21;
+if( mushrooms % 100 > 10 && mushrooms % 100 < 20 || 
+    mushrooms % 10 > 4 && mushrooms % 10 < 10 || 
+    mushrooms % 10 == 0)
+    console.log(mushrooms + " грибов");
+else if (mushrooms % 10 == 1)
+    console.log(mushrooms + " гриб");
+else
+    console.log(mushrooms + " гриба");
+
+
+// доставка товара
+let day = 2, hour = 7;
+
+if(day >= 1 && day <= 6 && hour >=8 && hour < 16)
+    console.log("Сегодня с 16.00 до 00.00");
+else if (day >= 1 && day <= 6 && hour <8)
+    console.log("Сегодня с 8.00 до 16.00");
+else if (day >= 1 && day <= 5 && hour >= 16 || day == 7)
+    console.log("Завтра с 8.00 до 16.00");
+else
+    console.log("Послезавтра с 8.00 до 16.00");
+
+console.log("" == 0);
