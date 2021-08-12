@@ -19,7 +19,7 @@ m = m + n, n = m - n, m = m - n;
 console.log(m,n);
 
 let num = 123;
-let thirdNum = num%10;
+let thirdNum = num % 10;
 let secondNum = (num - thirdNum) / 10 % 10;
 let firstNum = (num - 10 * secondNum - thirdNum) / 100;
 console.log(firstNum + secondNum + thirdNum);
