@@ -53,5 +53,6 @@ console.log("Среднее арифмитическое элементов ра
 let reverse = [];
 for (let k = 0, i = n-1; k < n; k++, i--){
     reverse[k] = d[i];
+    //reverse[k] = d[n-1-k];
 }
 console.log(d,reverse);
