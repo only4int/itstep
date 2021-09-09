@@ -46,7 +46,7 @@ function uniqueArray(a){
     let b = [], j = 0;
 
     for(let i = 0; i < a.length; i++){
-        if(!searchElementInArray(b, a[i])){
+        if(searchElementInArray(b, a[i]) == false){
             b[j] = a[i];
             j++;
         }
