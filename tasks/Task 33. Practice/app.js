@@ -11,3 +11,5 @@ field.addWall(3,1);
 field.addMine(1,2);
 field.addMine(2,0);
 field.show();
+
+let robot = new Robot(field,0,0,0);
