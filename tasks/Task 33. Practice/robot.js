@@ -30,22 +30,22 @@ class Robot{
     move(){
         let x,y;
         if(this.direction == 0){
-            x = this.x;
-            y = this.y - 1;
+            x = this.x - 1;
+            y = this.y ;
         }
         if(this.direction == 1){
-            x = this.x + 1;
-            y = this.y;
-        }
-        if(this.direction == 2){
             x = this.x;
             y = this.y + 1;
         }
-        if(this.direction == 3){
-            x = this.x - 1;
-            y = this.y;
+        if(this.direction == 2){
+            x = this.x + 1;
+            y = this.y ;
         }
-        if((x < this.field.n && x > -1) && (y < this.field.m && y > -1) && this.field[x][y] != 1){
+        if(this.direction == 3){
+            x = this.x ;
+            y = this.y - 1;
+        }
+        if((x < this.field.n && x > -1) && (y < this.field.m && y > -1) && this.field.cells[x][y] != 1){
             this.x = x;
             this.y = y;
             return true;
@@ -58,22 +58,22 @@ class Robot{
     removeMine(){
         let x,y;
         if(this.direction == 0){
-            x = this.x;
-            y = this.y - 1;
+            x = this.x - 1;
+            y = this.y ;
         }
         if(this.direction == 1){
-            x = this.x + 1;
-            y = this.y;
-        }
-        if(this.direction == 2){
             x = this.x;
             y = this.y + 1;
         }
-        if(this.direction == 3){
-            x = this.x - 1;
-            y = this.y;
+        if(this.direction == 2){
+            x = this.x + 1;
+            y = this.y ;
         }
-        if(this.field[x][y] == 2){
+        if(this.direction == 3){
+            x = this.x ;
+            y = this.y - 1;
+        }
+        if(this.field.cells[x][y] == 2){
             this.field.removeMine(x,y);
         }       
     }

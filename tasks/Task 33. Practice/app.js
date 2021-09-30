@@ -13,3 +13,15 @@ field.addMine(2,0);
 field.show();
 
 let robot = new Robot(field,0,0,0);
+
+robot.rotateDown();
+robot.move();
+robot.move();
+robot.rotateDown();
+robot.removeMine();
+robot.move();
+robot.move();
+robot.rotateDown();
+robot.move();
+robot.removeMine();
+field.show();
