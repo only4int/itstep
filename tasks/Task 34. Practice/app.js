@@ -23,3 +23,23 @@ let Y = X.addMatrix(matrixB);
 
 //let Y = matrixA.multipleByValue(2).addMatrix(matrixB)
 Y.show();
+
+import {Animal} from "./animal.js";
+import {Dog} from "./dog.js";
+import {Cat} from "./cat.js";
+import {Horse} from "./horse.js";
+import {Vet} from "./vet.js";
+
+let dog = new Dog("Bone","Street","Rex");
+let cat = new Cat("Meat","Home","Barsik");
+let vet = new Vet();
+dog.sleep();
+dog.makeNoise();
+dog.eat();
+
+let Animals = [];
+Animals.push(dog);
+Animals.push(cat);
+Animals.forEach(function(item) {
+    vet.treatAnimal(item);
+})
