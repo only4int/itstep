@@ -1,6 +1,6 @@
 class Category{
     name;
-    products;
+    products; // массив объектов Product
 
     constructor(name){
         this.name = name;

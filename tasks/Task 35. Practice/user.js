@@ -13,6 +13,7 @@ class User{
 
     addProductToBasket(product){
         this.basket.addToBasket(product);
+        //this.backet.products.push(product); неправильная альтернатива
     }
 
     show(){

@@ -1,7 +1,7 @@
 class Basket{
     products;
     constructor(){
-        this.products = [];
+        this.products = new Array();
     }
 
     addToBasket(product){
