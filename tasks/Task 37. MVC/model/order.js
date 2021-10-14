@@ -9,13 +9,13 @@ class Order{
 
     calculatePrice(){
         if(this.request.comfort == "business"){
-            this.price = this.request.pathLength*this.driver.price*2;
+            this.price = this.request.pathLength*this.driver.tax*2;
         }
         else if(this.request.comfort == "comfort"){
-            this.price = this.request.pathLength*this.driver.price*1.5;
+            this.price = this.request.pathLength*this.driver.tax*1.5;
         }
         else{
-            this.price = this.request.pathLength*this.driver.price; 
+            this.price = this.request.pathLength*this.driver.tax; 
         }
     }
 }
