@@ -48,3 +48,33 @@ for(let i = 1; i <= 8; i++){
 out += "</div>";
 
 document.write(out);
+
+out = "<table class='chess2'>";
+
+for(let i = 1; i <= 8; i++){
+    out += "<tr>";
+    for(let j = 1; j <= 8; j++){
+        if((i+j) % 2 == 0){
+            out += "<td class='white'></td>";
+        }
+        else{
+            out += "<td class='black'></td>";
+        }
+    }
+    out += "</tr>";
+}
+
+out += "</table>";
+
+document.write(out);
+
+fruits = ["apple", "orange", "lime","watermelon"];
+
+out = "<ul>";
+
+for(let i = 0; i < fruits.length; i++){
+    out += `<li>${fruits[i]}</li>`;
+}
+
+out += "</ul>";
+document.write(out);
