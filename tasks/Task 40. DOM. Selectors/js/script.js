@@ -26,3 +26,8 @@ let neighbors = section.getElementsByClassName("neighbor");
 for(let i = 0; i < neighbors.length; i++){
     neighbors.item(i).innerHTML =  "Я хороший сосед";
 }
+
+for(let i = 0; i < neighbors.length; i++){
+    let x = neighbors.item(i).innerHTML;
+    neighbors.item(i).innerHTML = `<span>${x}</span>`;
+}
