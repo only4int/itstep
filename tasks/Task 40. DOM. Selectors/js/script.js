@@ -31,3 +31,13 @@ for(let i = 0; i < neighbors.length; i++){
     let x = neighbors.item(i).innerHTML;
     neighbors.item(i).innerHTML = `<span>${x}</span>`;
 }
+for(let i = 0; i < neighbors.length; i++){
+    let neighbor = neighbors.item(i);
+    console.log(neighbor);
+    let span = neighbor.getElementsByTagName("span").item(0);
+    //span.outerHTML = `<b>${span.innerHTML}</b>`;
+    let b = document.createElement("b");
+    b.innerHTML = span.innerHTML;
+    neighbor.innerHTML = "";
+    neighbor.appendChild(b);
+}
