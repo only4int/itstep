@@ -104,3 +104,4 @@ divs.item(1).style.border = "1px solid #000";
 divs.item(1).style.padding = "10px";
 divs.item(1).style.backgroundColor = "#ff0";
 
+divs.item(1).setAttribute("id", "first");
