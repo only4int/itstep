@@ -45,6 +45,7 @@ element = document.getElementById("third-element");
 
 //3.1
 let tagBs = element.getElementsByTagName("b");
+
 let x = tagBs.length;
 for(let i = 0; i < x; i++){
     tagBs.item(0).outerHTML = `<strong>${tagBs.item(0).innerHTML}</strong>`;    
