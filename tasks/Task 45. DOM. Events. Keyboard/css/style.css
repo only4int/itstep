@@ -1,0 +1,33 @@
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+}
+
+.field{
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+.field > div{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    float: left;
+    background: green;
+}
+.field > .wall{
+    background: #000;
+}
+.field > .robot{
+    position: absolute;
+    background: red;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    left: 0;
+}
