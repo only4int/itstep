@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style5.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <form action="" method="post" name="user" class="reg-form">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-label">
+                                <label for="name">Имя:</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-control">
+                                <input type="text" name="name" id="name" value="" placeholder="Введите имя">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-label">
+                                <label for="email">Email:</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-control">
+                                <input type="text" name="email" id="email" value="" placeholder="Введите Email">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-label">
+                                <label>Пол:</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-control">
+                                <div class="form-control-radio">
+                                    <input type="radio" name="sex" id="sex_m" value="male"><label for="sex_m">Мужской</label>
+                                </div>
+                                <div class="form-control-radio">
+                                    <input type="radio" name="sex" id="sex_f" value="female"><label for="sex_f">Женский</label>
+                                </div>
+                                <div class="form-control-radio">
+                                    <input type="radio" name="sex" id="sex_o" value="other"><label for="sex_o">Другой</label>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-label">
+                                <label for="lang">Язык программирования:</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-control">
+                                <select name="lang" id="lang">
+                                    <option value="0">Выберите язык</option>
+                                    <option value="javascript">Javascript</option>
+                                    <option value="java">Java</option>
+                                    <option value="c#">C#</option>
+                                    <option value="php">PHP</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-label">
+                                <label for="">Я не робот:</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-control">
+                                <div class="form-control-check">
+                                    <input type="checkbox" name="robot" id="robot" value="no">
+                                </div>                      
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-control">
+                                <button>Отправить</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script5.js"></script>
+</body>
+</html>
