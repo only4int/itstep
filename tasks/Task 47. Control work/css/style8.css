@@ -1,0 +1,31 @@
+table{
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+td{
+    width: 100px;
+    height: 100px;
+    background: #fff;
+}
+
+tr:nth-child(2n) td:nth-child(2n){
+    background: #000;
+}
+tr:nth-child(2n+1) td:nth-child(2n+1){
+    background: #000;
+}
+div{
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 1px solid red;
+}
+div.black{
+    background: #000;
+}
+div.white{
+    background: #fff;
+}
