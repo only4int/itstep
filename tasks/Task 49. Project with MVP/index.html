@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="game">
+        <form action="" name="start_form" class="start_form">
+            <div class="col-12 btn-block">
+                <button class="btn btn-primary" name="start_play">Играть</button>
+            </div>
+            <div class="col-12 btn-block">
+                <button class="btn btn-primary" name="start_stats">Чемпионы</button>
+            </div>
+        </form>
+        <form action="" name="login_form" class="login_form d-none">
+            <div class="col-12">
+                <label for="player1_name" class="form-label">Игрок 1</label>
+                <input type="text" class="form-control" id="player1_name" name="player1_name" required>
+            </div>
+            <div class="col-12">
+                <label for="player2_name" class="form-label">Игрок 2</label>
+                <input type="text" class="form-control" id="player2_name" name="player2_name" required>
+            </div>
+            <div class="col-12 btn-block">
+                <button class="btn btn-primary"  name="start_game">Начать</button>
+            </div>
+        </form>
+        <form action="" name="game_form" class="game_form d-none">
+            <div class="col-12 current">
+
+            </div>
+            <div class="col-12 field">
+                
+            </div>
+            <div class="col-12 result">
+                
+            </div>
+        </form>
+    </div>
+    <script src="./model/utils.js"></script>
+    <script src="./model/player.js"></script>
+    <script src="./model/field.js"></script>
+    <script src="./model/logs.js"></script>
+    <script src="./model/stat.js"></script>
+    <script src="./model/game.js"></script>
+    <script src="./controller/game.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

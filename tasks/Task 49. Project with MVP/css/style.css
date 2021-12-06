@@ -1,0 +1,71 @@
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    background: url(../img/main-bg.jpg);
+}
+.game{
+    width: 340px;
+    height: 300px;
+    background: wheat;
+    display: flex;
+    justify-content: center;
+}
+.start_form, .login_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login_form > div{
+    padding: 10px 20px;
+}
+.btn-block, .login_form > .btn-block{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+input{
+    width: 230px;
+}
+.btn-block button{
+    width: 100%;
+    min-width: 200px;
+}
+.current,.result{
+    padding: 10px 20px;
+    text-align: center;
+}
+.field{
+    padding: 20px;
+}
+.field table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 0;
+}
+.field table tr td{
+    border: 0;
+    width: 60px;
+    height: 60px;
+}
+
+.field table tr:nth-child(n+2) td{
+    border-top: 2px solid crimson;
+}
+
+.field table tr td:nth-child(n+2){
+    border-left: 2px solid crimson;
+}
+.field table tr td.k{
+    background: url(../img/k.svg) center center no-repeat;
+    background-size: 70%;
+}
+.field table tr td.n{
+    background: url(../img/n.svg) center center no-repeat;
+    background-size: 70%;
+}
