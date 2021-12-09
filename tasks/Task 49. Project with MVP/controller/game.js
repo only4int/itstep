@@ -9,19 +9,7 @@ class GameController{
     }
 
     createGame(){
-        let utils = new Utils();
-        
-        let player1, player2;
 
-        if(utils.getRandomNumber(1,2) == 1){
-            player1 = new Player(document.forms.login_form.player1_name.value);
-            player2 = new Player(document.forms.login_form.player2_name.value);
-        } else{
-            player1 = new Player(document.forms.login_form.player2_name.value);
-            player2 = new Player(document.forms.login_form.player1_name.value);
-        }
-
-        this.game = new Game(player1, player2);
     }
 
     start(){
@@ -31,8 +19,39 @@ class GameController{
             document.forms.login_form.classList.remove("was-validated");
             document.forms.login_form.classList.add("d-none");
             
-            this.createGame();
-            this.createField();
+            //this.createGame();
+            let utils = new Utils();
+        
+            let player1, player2;
+    
+            if(utils.getRandomNumber(1,2) == 1){
+
+                player1 = new Player(document.forms.login_form.player1_name.value);
+                player2 = new Player(document.forms.login_form.player2_name.value);
+            } else{
+
+                player1 = new Player(document.forms.login_form.player2_name.value);
+                player2 = new Player(document.forms.login_form.player1_name.value);
+            }
+    
+            this.game = new Game(player1, player2);
+
+            let table = document.createElement("table");
+            for(let i = 0; i < 3; i++){
+                let row = document.createElement("tr");
+                    
+                for(let j = 0; j < 3; j++){
+                    let data = document.createElement("td");
+                    row.append(data)
+                    } 
+                table.append(row);  
+            }
+                    
+            table.addEventListener("click", this.play, false);
+        
+            document.querySelector(".field").append(table);
+
+           // this.createField();
 
             document.querySelector(".current").innerHTML = `Ходит игрок <b>${this.game.getCurrentPlayerName()}</b>`;
             document.querySelector(".game_form").classList.remove("d-none");
@@ -42,24 +61,11 @@ class GameController{
     }
 
     createField(){
-        let table = document.createElement("table");
-        for(let i = 0; i < 3; i++){
-            let row = document.createElement("tr");
-                
-            for(let j = 0; j < 3; j++){
-                let data = document.createElement("td");
-                row.append(data)
-                } 
-            table.append(row);  
-        }
-                
-        table.addEventListener("click",this.play, false);
-    
-        document.querySelector(".field").append(table);
+
     }
 
     play(event){
-
+        
         let td = event.target;
     
         if(td.tagName != "TD")
@@ -67,7 +73,7 @@ class GameController{
     
         let x = td.cellIndex;    
         let y = td.parentNode.rowIndex;
-    
+        
         if(this.game.field.cells[x][y] != 0)
             return false;
     
