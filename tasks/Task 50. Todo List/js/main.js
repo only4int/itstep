@@ -1,4 +1,5 @@
 var editElement = null;
+var history = [];
 
 document.forms.todo_form.onsubmit = function(){
 
@@ -25,6 +26,10 @@ document.forms.todo_form.onsubmit = function(){
     close.textContent = "×";
     li.append(close);
     list.append(li);
+   /* history.push({
+        action: "add",
+        element: li
+    });*/
     this.task.value = "";
     return false;
 }
@@ -65,3 +70,20 @@ document.querySelector("ul").addEventListener("click", function (event) {
 
     return false;
 })
+
+document.onkeydown = function(event){
+    if(event.code == "Escape" && editElement !== null){
+        editElement = null;
+        document.querySelector(".btn").innerHTML = "Добавить"; 
+        task.value = "";
+    }
+
+    if(event.code == "KeyZ" && event.ctrlKey == true){
+       /* let lastAction = history.pop();
+        if(lastAction){
+            if(lastAction.action == "add"){
+                lastAction.element.remove();
+            }
+        }*/
+    }
+} 

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat list</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+   <div class="container">
+       <div class="row">
+           <div class="col-12 col-md-4 col-lg-4">
+                <form name="cat_form">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Кличка</label>
+                        <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="color" class="form-label">Цвет</label>
+                        <input type="color" class="form-control form-control-color" id="color" value="#563d7c" title="Выверите цвет">
+                    </div>
+                    <div class="mb-3">
+                        <label for="breed" class="form-label">Порода</label>
+                        <select class="form-select" id="breed" name="breed">
+                            <option selected>Выбрать породу</option>
+                            <option value="Европейская">Европейская</option>
+                            <option value="Персидская">Персидская</option>
+                            <option value="Дворовая">Дворовая</option>
+                        </select>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sex" id="sexM" value="M">
+                        <label class="form-check-label" for="sexM">
+                          Кот
+                        </label>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="sex" id="sexF" value="F">
+                        <label class="form-check-label" for="sexF">
+                          Кошка
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary add">Добавить</button>
+                    <button type="submit" class="btn btn-primary d-none save">Сохранить</button>
+              </form>
+           </div>
+           <div class="col-12 col-md-8 col-lg-8">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Кличка</th>
+                    <th scope="col">Цвет</th>
+                    <th scope="col">Порода</th>
+                    <th scope="col">Пол</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+              </table>
+            </div>
+       </div>
+   </div>
+
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
