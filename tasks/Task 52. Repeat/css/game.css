@@ -1,0 +1,30 @@
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+}
+
+.container{
+    background: wheat;
+    display: flex;
+    justify-content: center;
+}
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td{
+    width: 50px;
+    height: 50px;
+    border: 2px solid #fff;
+    background: #f00;
+}
+td.check{
+    background: #000;
+}
