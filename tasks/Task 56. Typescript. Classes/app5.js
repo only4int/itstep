@@ -1,3 +1,4 @@
+//tsc -t es5 app5.ts - сборка
 var Foo = /** @class */ (function () {
     function Foo() {
     }
@@ -16,3 +17,4 @@ var Foo = /** @class */ (function () {
 var myFoo = new Foo();
 var myBar = myFoo.bar; // здесь вызывается геттер
 myFoo.bar = true; // здесь вызывается сеттер
+console.log(myFoo.bar);

@@ -1,7 +1,12 @@
 console.log(1);
 try {
-    if (1)
-        throw new Error;
+    /**код **/
+    var a = 2;
+    var b = 0;
+    if (b == 0)
+        throw new Error("Division by zero");
+
+    console.log(a / b);
 }
 catch (error) {
     console.log(2);

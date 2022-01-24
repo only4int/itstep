@@ -9,8 +9,8 @@ class Phone{
     model: string;
     weight: number;
 
-    constructor();
-    constructor(obj: IPhone);
+ //   constructor();
+  //  constructor(obj: IPhone);
     constructor(obj?: any){
         this.number = obj && obj.number || "";
         this.model = obj && obj.model || "";
@@ -24,4 +24,5 @@ class Phone{
 }
 
 const phone1 = new Phone();
-const phone2 = new Phone({number:"123123",model:"Nokia",weight: 200});
+const phone2 = new Phone({number:"123123",model:"Nokia",name:"sdfsdf"});
+phone2.receiveCall("Вася");
