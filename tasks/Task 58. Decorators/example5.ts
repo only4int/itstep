@@ -50,6 +50,7 @@ class User {
     setName(@logParameter name: string){
         this.name = name;
     }
+    
     print():void{
         console.log(this.name);
     }

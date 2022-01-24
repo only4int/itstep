@@ -4,13 +4,6 @@
         "experimentalDecorators": true
     },
     "files":[
-        "example1.ts",
-        "example2.ts",
-        "example3.ts",
-        "example4.ts",
-        "example5.ts",
-        "example6.ts",
-        "example7.ts",
-        "example8.ts"
+        "Task1.ts"
     ]
 }
