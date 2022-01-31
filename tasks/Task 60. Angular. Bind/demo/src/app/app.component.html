@@ -1,0 +1,18 @@
+<span>{{title}}</span>
+<p>Мой возраст - {{age}} лет</p>
+
+<img [src]="link" />
+
+<img src="{{link}}" />
+
+<p [textContent]="title"></p>
+
+<p textContent="{{title}}"></p>
+
+<input type="text" [value]="age">
+
+<button (click)="subAge()">Уменьшить возраст на 1</button>
+
+<button  [class]="red" (click)="addAge($event)" (mouseover)="addClass()" (mouseout)="removeClass()">Увеличить возраст на 1</button>
+
+<input type='text' [(ngModel)]="age">

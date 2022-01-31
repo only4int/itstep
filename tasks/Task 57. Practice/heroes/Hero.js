@@ -21,7 +21,7 @@ var Hero = /** @class */ (function () {
         return false;
     };
     Hero.prototype.attack = function (enemy) {
-        this.xp -= enemy.takeDamage(20);
+        this.xp -= enemy.takeDamage(1);
     };
     return Hero;
 }());

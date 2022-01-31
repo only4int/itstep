@@ -5,5 +5,4 @@ var Spell;
 (function (Spell) {
     Spell[Spell["FIREBALL"] = 0] = "FIREBALL";
     Spell[Spell["THUNDERSHOT"] = 1] = "THUNDERSHOT";
-})(Spell || (Spell = {}));
-exports.Spell = Spell;
+})(Spell = exports.Spell || (exports.Spell = {}));

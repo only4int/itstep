@@ -1,6 +1,4 @@
-enum Spell{
+export enum Spell{
     FIREBALL,
     THUNDERSHOT
 }
-
-export {Spell};

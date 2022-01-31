@@ -15,12 +15,22 @@
                         "polyfills": "src/polyfills.ts",
                         "tsConfig": "tsconfig.json",
                         "aot": true
+                        },
+                    "configurations": {
+                        "production": {
+                            "optimization": true,
+                            "outputHashing": "all",
+                            "sourceMap": false,
+                            "namedChunks": false,
+                            "vendorChunk": false,
+                            "buildOptimizer": true
+                            }
                         }
                     },
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "options": {
-                    "browserTarget": "helloapp:build"
+                        "browserTarget": "helloapp:build"
                     }
                 }
             }
