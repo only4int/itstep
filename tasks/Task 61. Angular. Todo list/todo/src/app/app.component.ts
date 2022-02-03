@@ -7,9 +7,9 @@ import { Item } from './item';
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    title:string = "";
+    title:string = ""; // особо не нужно
 
-    tasks:Item[] = [
+    tasks: Array<Item> = [
                     {title:"Сварить яйца", done: false},
                     {title:"Прочитать книгу по Javascript", done: false},
                     {title:"Сходить на работу", done: true}
@@ -21,5 +21,30 @@ export class AppComponent {
                 title: title,
                 done: false
             })
+    }
+
+    countTasks(status: boolean): number{
+        return this.tasks.filter(function(item:Item){
+            return item.done == status;
+        }).length;
+    }
+
+    filterTasks(status: boolean):Item[]{
+        return this.tasks.filter(function(item:Item){
+            return item.done == status;
+        })
+    }
+
+    changeStatus(task:Item):void{
+        task.done = !task.done;
+    }
+
+    deleteTask(task:Item):void{
+        let index:number = this.tasks.findIndex(function(item:Item) {
+            item == task
+        });
+        if(index !== -1){
+            this.tasks.splice(index, 1);
+        }
     }
 }
