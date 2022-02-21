@@ -35,8 +35,8 @@ export class AppComponent {
         })
     }
 
-    changeStatus(task:Item):void{
-        task.done = !task.done;
+    changeStatus(t:Item):void{
+        t.done = !t.done;
     }
 
     deleteTask(task:Item):void{

@@ -19,10 +19,10 @@
     <div *ngIf="countTasks(false) > 0">
         <h2>Невыполненные задачи - {{countTasks(false)}}</h2>
         <ul id="list">
-            <li *ngFor="let task of filterTasks(false); let i = index" [class.checked]="task.done" (dblclick)="changeStatus(task)">
-                {{i+1}}. {{task.title}}
+            <li *ngFor="let a of filterTasks(false); let i = index" [class.checked]="a.done" (dblclick)="changeStatus(a)">
+                {{i+1}}. {{a.title}}
                 <span class="edit">&#9998;</span>
-                <span class="close" (click)="deleteTask(task)">×</span>
+                <span class="close" (click)="deleteTask(a)">×</span>
             </li>
         </ul>
     </div>
