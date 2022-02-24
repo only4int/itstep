@@ -1,4 +1,3 @@
-import { createInjectorType } from '@angular/compiler/src/render3/r3_injector_compiler';
 import { Component } from '@angular/core';
 import { Player } from './Player';
 
@@ -26,6 +25,8 @@ export class AppComponent {
             this.current1 = false;
             this.current2 = true;
             this.currentLetter = this.city[this.city.length-1].toLowerCase();
+            this.city = "";
+            return;
         }
         
         let firstLetter = this.city[0].toLowerCase(); 
@@ -34,7 +35,7 @@ export class AppComponent {
             return;
         }
 
-        this.currentLetter = firstLetter;
+        this.currentLetter = this.city[this.city.length-1].toLowerCase();
         if(this.current1){
             this.player1.cities.push(this.city);
             this.current1 = false;
@@ -44,6 +45,7 @@ export class AppComponent {
             this.current1 = true;
             this.current2 = false;
         }
+        this.city = "";
     }
 
     checkCity(city:string): boolean{

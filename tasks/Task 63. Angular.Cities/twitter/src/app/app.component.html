@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="form">
+            <div class="col-6">
+                <div class="mb-3">
+                    <label for="user" class="form-label">Имя пользователя</label>
+                    <input type="text" class="form-control" id="user" [(ngModel)]="user">
+                </div>
+                <div class="mb-3">
+                    <label for="text" class="form-label">Сообщение</label>
+                    <textarea class="form-control" id="text" [(ngModel)]="text"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" (click)="addPost()">Написать</button>
+            </div>
+        </div>
+        <div class="twits">
+            <div class="col-6">
+                <app-twit [twits]="posts"></app-twit>
+            </div>
+        </div>
+    </div>
+</div>
