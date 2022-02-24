@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <header [class.active]="current1">
+                {{player1.name}}
+            </header>
+            <div class="cities">
+                <app-list [list]="player1.cities"></app-list>
+            </div>
+        </div>
+        <div class="col-4">
+            <div>
+                <input class="form-control" [(ngModel)]="city" placeholder="Угадай число" (keyup)="addCity($event)"/>
+                <div>
+                    Текущая буква - <b>{{currentLetter}}</b>
+                </div>
+            </div>   
+        </div>
+        <div class="col-4">
+            <header [class.active]="current2">
+                {{player2.name}}
+            </header>
+            <div class="cities">
+                <app-list [list]="player2.cities"></app-list>
+            </div>
+        </div>
+    </div>
+</div>
