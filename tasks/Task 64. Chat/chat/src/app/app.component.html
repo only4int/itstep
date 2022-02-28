@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <div class="user-input">
+                <app-input [name]="firstUser" (onKeyUp)="addMessage($event)"></app-input>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="user-messages">
+                <app-chat [messages2]="messages1"></app-chat>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="user-input">
+                <app-input  [name]="secondUser" (onKeyUp)="addMessage($event)"></app-input>
+            </div>
+        </div>
+    </div>
+</div>

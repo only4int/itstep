@@ -1,0 +1,11 @@
+<div class="chat-block">
+    <div class="message-list">
+        <div *ngFor="let message of messages2" class="message-item">
+            <div class="message-body">
+                <div class="message-text">{{message.user}}</div>
+                <div class="message-text">{{message.text}}</div>
+                <div class="message-date">{{message.date | date:'hh:mm'}}</div>
+            </div>
+        </div>
+    </div>
+</div>

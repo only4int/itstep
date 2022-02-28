@@ -1,0 +1,26 @@
+$black: #000;
+
+.chat-block{
+    border: 1px solid $black; 
+    height: 100%;
+    overflow-y: scroll;
+    padding: 10px;
+    display: flex;
+    flex-flow: column wrap;
+}
+.message-item{
+    margin-bottom: 20px;
+    display: flex;
+}
+.message-body{
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    max-width: 80%;
+}
+.message-left{
+    align-self: start;
+}
+.message-right{
+    align-self: self-end;
+}
