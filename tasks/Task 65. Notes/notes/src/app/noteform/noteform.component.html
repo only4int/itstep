@@ -1,0 +1,15 @@
+<div class="note_form">
+    <div class="mb-3">
+        <label for="note_title" class="form-label">Название заметки</label>
+        <input [(ngModel)]="title" type="text" class="form-control" id="note_title" placeholder="Введите название заметки">
+    </div>
+    <div class="mb-3">
+        <label for="note_text" class="form-label">Текст заметки</label>
+        <textarea [(ngModel)]="text" class="form-control" id="note_text" rows="3"></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="note_date" class="form-label">Дата заметки</label>
+        <input [(ngModel)]="date" type="date" class="form-control" id="note_date" placeholder="Дата заметки">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="addNote()">Добавить</button>
+</div>

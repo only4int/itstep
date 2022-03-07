@@ -1,0 +1,12 @@
+<div class="note_list">
+    <div class="row">
+        <div class="col-12">
+            <div class="note_list_head">
+                Мои заметки
+            </div>   
+        </div>
+        <div *ngFor="let note of notes" class="col-3 col-12 col-md-4">
+            <app-note [note]="note" (onDelete)="deleteNote($event)"></app-note>
+        </div>
+    </div>
+</div>

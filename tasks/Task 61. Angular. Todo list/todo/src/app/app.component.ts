@@ -41,7 +41,7 @@ export class AppComponent {
 
     deleteTask(task:Item):void{
         let index:number = this.tasks.findIndex(function(item:Item) {
-            item == task
+            return item == task
         });
         if(index !== -1){
             this.tasks.splice(index, 1);

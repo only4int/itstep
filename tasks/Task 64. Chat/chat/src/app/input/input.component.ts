@@ -13,7 +13,7 @@ export class InputComponent implements OnInit{
     message: string = "";
 
     @Output() 
-    onKeyUp = new EventEmitter<{name: string, text: string}>();
+    myEvent = new EventEmitter<{name: string, text: string}>();
     
     enterMessage($event: any) {
         if($event.keyCode != 13)
@@ -23,7 +23,7 @@ export class InputComponent implements OnInit{
 
         let data: any = {name: this.name, text: this.message};
 
-        this.onKeyUp.emit(data);
+        this.myEvent.emit(data);
 
         this.message = "";
     }

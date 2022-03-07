@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="row">
+                 <app-noteform (onSend)="addNote($event)"></app-noteform>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <app-notelist [notes]="notes" (onDelete)="deleteNote($event)"></app-notelist>
+    </div>
+</div>

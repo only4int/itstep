@@ -7,12 +7,12 @@
 
 <p [textContent]="title"></p>
 
-<p textContent="{{title}}"></p>
+<p>{{title}}</p>
 
 <input type="text" [value]="age">
 
 <button (click)="subAge()">Уменьшить возраст на 1</button>
 
-<button  [class]="red" (click)="addAge($event)" (mouseover)="addClass()" (mouseout)="removeClass()">Увеличить возраст на 1</button>
+<button [class.hover]="active" [class]="red" (click)="addAge($event);addAge($event)" (mouseover)="addClass()" (mouseout)="removeClass()">Увеличить возраст на 1</button>
 
 <input type='text' [(ngModel)]="age">

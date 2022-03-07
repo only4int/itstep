@@ -1,0 +1,12 @@
+<div class="note">
+    <div class="note_title">
+        {{note.title}}
+    </div>
+    <div class="note_date">
+        {{note.date | date:'dd.MM.yyyy'}}
+    </div>
+    <div class="note_text">
+        {{note.text}}
+    </div>
+    <span class="close" (click)="deleteNote(note)">х</span>
+</div> 

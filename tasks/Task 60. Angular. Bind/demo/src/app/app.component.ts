@@ -11,6 +11,7 @@ export class AppComponent {
     link: string = "https://www.mts.by/local/templates/ns_mts/img/svg/logo-new.svg"; // привязка к атрибуту
     name: string = "Мое имя";
     red = "";
+    active: boolean = false;
 
     subAge():void{
         this.age--;

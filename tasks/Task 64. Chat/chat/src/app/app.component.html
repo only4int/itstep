@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-3">
             <div class="user-input">
-                <app-input [name]="firstUser" (onKeyUp)="addMessage($event)"></app-input>
+                <app-input [name]="firstUser" (myEvent)="addMessage($event)"></app-input>
             </div>
         </div>
         <div class="col-6">
@@ -12,7 +12,7 @@
         </div>
         <div class="col-3">
             <div class="user-input">
-                <app-input  [name]="secondUser" (onKeyUp)="addMessage($event)"></app-input>
+                <app-input  [name]="secondUser" (myEvent)="addMessage($event)"></app-input>
             </div>
         </div>
     </div>
