@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-6">
+        <div class="mb-3">
+            <label for="article_title" class="form-label">Заголовок</label>
+            <input type="text" [(ngModel)]="title" class="form-control" id="article_title" placeholder="Название">
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="mb-3">
+            <label for="article_author" class="form-label">Автор</label>
+            <input type="text" [(ngModel)]="author" class="form-control" id="article_author" placeholder="Автор">
+        </div>        
+    </div>
+    <div class="col-6">
+        <div class="mb-3">
+            <label for="article_date" class="form-label">Дата публикации</label>
+            <input type="date" [(ngModel)]="date" class="form-control" id="article_author" placeholder="Дата публикации">
+        </div>  
+    </div>
+    <div class="col-6">
+        <div class="mb-3">
+            <label for="article_picture" class="form-label">Изображение</label>
+            <input type="text" [(ngModel)]="picture" class="form-control" id="article_picture" placeholder="Дата публикации">
+        </div>          
+    </div>
+    <div class="col-6">
+        <div class="mb-3">
+            <label for="article_previewText" class="form-label">Превью статьи</label>
+            <textarea [(ngModel)]="previewText" class="form-control" id="article_previewText" rows="3"></textarea>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="mb-3">
+            <label for="article_fullText" class="form-label">Полный текст</label>
+            <textarea [(ngModel)]="fullText" class="form-control" id="article_fullText" rows="3"></textarea>
+        </div>        
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary" (click)="addArticle()">Отправить</button>
+    </div>
+</div>

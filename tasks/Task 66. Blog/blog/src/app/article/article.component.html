@@ -1,0 +1,17 @@
+        <div class="article">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                    <img src="{{article.picture}}" class="img-fluid rounded-start" [alt]="article.title">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">{{article.title}}</h5>
+                            <p class="card-text"><small class="text-muted">{{article.author}}</small></p>
+                            <p class="card-text">{{article.previewText}}</p>
+                            <p class="card-text"><small class="text-muted">{{article.date | date:'dd.MM.yyyy'}}</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

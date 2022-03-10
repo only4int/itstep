@@ -6,7 +6,7 @@ export class NoteService {
     private data: Note[] = [{date: new Date(), title: "Шаг", text: "Занятия в 18.30"}];
 
     getData(): Note[] {
-        return this.data.sort((a: Note, b: Note) => <any>new Date(a.date) - <any>new Date(b.date));
+        return this.data;
     }
 
     addData(note: Note): void{

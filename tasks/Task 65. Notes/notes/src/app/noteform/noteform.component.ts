@@ -19,7 +19,7 @@ export class NoteformComponent  {
         if(this.title == "" || this.text == "")
             return;
             
-        let note = new Note(this.date, this.title, this.text)
+        let note = new Note(new Date(this.date), this.title, this.text)
         this.onSend.emit(note);    
 
         this.date = new Date();
