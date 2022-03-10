@@ -32,7 +32,8 @@ export class ArticleformComponent implements OnInit {
                             this.fullText,
                             this.picture,
                             this.date,
-                            this.author
+                            this.author,
+                            false
                             );
         
         this.articleService.create(article);

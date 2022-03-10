@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Article } from '../article.model';
+import { ArticleService } from '../article.service';
 
 @Component({
   selector: 'app-article',
@@ -8,14 +9,21 @@ import { Article } from '../article.model';
 })
 export class ArticleComponent implements OnInit {
 
-  constructor() { 
-      this.article = new Article("","","","",new Date,"");
-  }
+    constructor(private service:ArticleService) { 
+        this.article = new Article("","","","",new Date,"", false);
+    }
 
-  ngOnInit(): void {
-  
-  }
-  
-  @Input()
-  article: Article;
+    ngOnInit(): void {
+    
+    }
+
+    @Input()
+    article: Article;
+
+    changeStatus(){
+        let articles: Article[] = this.service.get();
+        let index = articles.indexOf(this.article);
+        if(index !== -1)
+            articles[index].favorite = !articles[index].favorite;
+    }
 }
