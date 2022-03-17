@@ -1,41 +1,59 @@
-<div class="row">
+<form class="row" [formGroup]="form" novalidate (ngSubmit)="addArticle()">
     <div class="col-6">
         <div class="mb-3">
             <label for="article_title" class="form-label">Заголовок</label>
-            <input type="text" [(ngModel)]="title" class="form-control" id="article_title" placeholder="Название">
+            <input type="text" formControlName="title" name="title" class="form-control" id="article_title" placeholder="Название">
+        </div>
+        <div *ngIf="form.controls['title'].invalid && form.controls['title'].touched" class="invalid-feedback">
+            Обязательное поле
         </div>
     </div>
     <div class="col-6">
         <div class="mb-3">
             <label for="article_author" class="form-label">Автор</label>
-            <input type="text" [(ngModel)]="author" class="form-control" id="article_author" placeholder="Автор">
+            <input type="text" formControlName="author" name="author" class="form-control" id="article_author" placeholder="Автор">
+        </div>
+        <div *ngIf="form.controls['author'].invalid && form.controls['author'].touched" class="invalid-feedback">
+            Обязательное поле
         </div>        
     </div>
     <div class="col-6">
         <div class="mb-3">
             <label for="article_date" class="form-label">Дата публикации</label>
-            <input type="date" [(ngModel)]="date" class="form-control" id="article_author" placeholder="Дата публикации">
+            <input type="date" formControlName="date" name="date" class="form-control" id="article_author" placeholder="Дата публикации">
+        </div>
+        <div *ngIf="form.controls['date'].invalid && form.controls['date'].touched" class="invalid-feedback">
+            Обязательное поле
         </div>  
     </div>
     <div class="col-6">
         <div class="mb-3">
             <label for="article_picture" class="form-label">Изображение</label>
-            <input type="text" [(ngModel)]="picture" class="form-control" id="article_picture" placeholder="Дата публикации">
+            <input type="text" formControlName="picture" name="picture" class="form-control" id="article_picture" placeholder="Дата публикации">
+        </div>
+        <div *ngIf="form.controls['picture'].invalid && form.controls['picture'].touched" class="invalid-feedback">
+            Обязательное поле
         </div>          
     </div>
     <div class="col-6">
         <div class="mb-3">
             <label for="article_previewText" class="form-label">Превью статьи</label>
-            <textarea [(ngModel)]="previewText" class="form-control" id="article_previewText" rows="3"></textarea>
+            <textarea name="previewText" formControlName="previewText" class="form-control" id="article_previewText" rows="3"></textarea>
+        </div>
+        <div *ngIf="form.controls['previewText'].invalid && form.controls['previewText'].touched" class="invalid-feedback">
+            Обязательное поле
         </div>
     </div>
     <div class="col-6">
         <div class="mb-3">
             <label for="article_fullText" class="form-label">Полный текст</label>
-            <textarea [(ngModel)]="fullText" class="form-control" id="article_fullText" rows="3"></textarea>
-        </div>        
+            <textarea name="fullText" formControlName="fullText" class="form-control" id="article_fullText" rows="3"></textarea>
+        </div> 
+        <div *ngIf="form.controls['fullText'].invalid && form.controls['fullText'].touched" class="invalid-feedback">
+            Обязательное поле
+        </div>       
     </div>
     <div class="col-12">
-        <button type="submit" class="btn btn-primary" (click)="addArticle()">Отправить</button>
+        <button type="submit" class="btn btn-primary">Отправить</button>
     </div>
-</div>
+</form>

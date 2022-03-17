@@ -10,7 +10,15 @@ import { ArticleService } from '../article.service';
 export class ArticleComponent implements OnInit {
 
     constructor(private service:ArticleService) { 
-        this.article = new Article("","","","",new Date,"", false);
+      this.article = {
+            title: "",
+            previewText:"",
+            fullText: "",
+            picture: "",
+            date: new Date,
+            author: "",
+            favorite: false
+      };
     }
 
     ngOnInit(): void {
