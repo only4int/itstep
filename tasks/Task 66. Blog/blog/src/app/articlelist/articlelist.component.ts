@@ -10,7 +10,8 @@ import { ArticleService } from '../article.service';
 export class ArticlelistComponent implements OnInit {
 
     articles: Article[] = [];
-    constructor(private articleService: ArticleService) { }
+    private articleService: ArticleService = new ArticleService();
+    constructor() { }
 
     ngOnInit(): void {
         this.articles = this.articleService.get();

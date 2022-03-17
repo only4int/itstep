@@ -5,6 +5,7 @@ export class ArticleService {
     constructor() { }
 
     data: Array<Article> = [];
+    users: Array<string> = ["Вася", "Петя", "Коля"];
 
     create(article: Article){
         this.data.push(article);
@@ -26,5 +27,9 @@ export class ArticleService {
 
     update(article: Article):void{
         //
+    }
+
+    getUsers(): Array<string>{
+        return this.users;
     }
 }

@@ -11,16 +11,18 @@ import { ArticleService } from '../article.service';
 export class ArticleformComponent implements OnInit {
 
     form: FormGroup;
-
+    users: Array<string>;
+    
     constructor(private articleService: ArticleService) { 
       this.form = new FormGroup({
-        "title": new FormControl("", [Validators.required, Validators.maxLength(100)]),
+        "title": new FormControl("", [Validators.required, Validators.maxLength(100), Validators.minLength(10)]),
         "previewText": new FormControl("", [Validators.required]),
         "fullText": new FormControl("", [Validators.required, Validators.minLength(20)]),
-        "picture": new FormControl("", [Validators.required]),
+        "picture": new FormControl("", [Validators.required, this.checkField]),
         "date": new FormControl(new Date(), [Validators.required]),
-        "author": new FormControl("", [Validators.required])
+        "author": new FormControl("Выберите автора", [Validators.required])
       })
+      this.users = articleService.getUsers();
     }
 
     ngOnInit(): void {
@@ -43,5 +45,14 @@ export class ArticleformComponent implements OnInit {
         };
         
         this.articleService.create(article);
+    }
+
+    checkField(control: FormControl): {[s:string]: boolean}|null{
+
+        if(control.value == "no"){
+            return {"check": true};
+        }
+
+        return null;
     }
 }
