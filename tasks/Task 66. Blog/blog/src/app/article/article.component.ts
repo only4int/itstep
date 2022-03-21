@@ -11,6 +11,7 @@ export class ArticleComponent implements OnInit {
 
     constructor(private service:ArticleService) { 
       this.article = {
+            id: 0,
             title: "",
             previewText:"",
             fullText: "",

@@ -1,0 +1,7 @@
+<p>{{article.id}}</p>
+<p>{{article.title}}</p>
+<p>{{article.date | date:'dd.MM.yyyy'}}</p>
+<p>{{article.author}}</p>
+<p>{{article.fullText}}</p>
+<img [src]="article.picture" [alt]="article.title">
+<a [routerLink]="['/list']">Назад</a>

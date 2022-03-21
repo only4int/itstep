@@ -10,7 +10,19 @@ import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
 import { ArticleService } from './article.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { ArticleDetailComponent } from './article-detail/article-detail.component';
 
+
+let routes: Routes = [
+    {path: "", component: HomeComponent, pathMatch: 'full'},
+    {path: "list", component: ArticlelistComponent, pathMatch: 'full'},
+    {path: "list/:id", component: ArticleDetailComponent},
+    {path: "form", component: ArticleformComponent},
+    {path: "**", component: NotFoundComponent}
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,10 +31,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ArticleComponent,
     FooterComponent,
     HeaderComponent,
-    MainComponent
+    MainComponent,
+    HomeComponent,
+    NotFoundComponent,
+    ArticleDetailComponent
   ],
   imports: [
-    BrowserModule, FormsModule, ReactiveFormsModule
+    BrowserModule, FormsModule, ReactiveFormsModule, RouterModule.forRoot(routes)
   ],
   providers: [ArticleService],
   bootstrap: [AppComponent]

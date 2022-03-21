@@ -1,67 +1,73 @@
-<form class="row" [formGroup]="form" novalidate (ngSubmit)="addArticle()">
-    <div class="col-6">
-        <div class="mb-3">
-            <label for="article_title" class="form-label">Заголовок</label>
-            <input [class.error]="form.controls['title'].invalid && form.controls['title'].touched" type="text" formControlName="title" name="title" class="form-control" id="article_title" placeholder="Название">
-        </div>
-        <div *ngIf="form.controls['title'].invalid && form.controls['title'].touched" class="alert alert-danger">
-            <span *ngIf="form.controls['title'].errors?.['required']">Поле должно быть непустым</span>
-            <span *ngIf="form.controls['title'].errors?.['minlength']">Минимальная длина должна быть 10 символов</span>
-            <span *ngIf="form.controls['title'].errors?.['maxlength']">Минимальная длина должна быть не более 200 символов</span>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <form class="row" [formGroup]="form" novalidate (ngSubmit)="addArticle()">
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="article_title" class="form-label">Заголовок</label>
+                        <input [class.error]="form.controls['title'].invalid && form.controls['title'].touched" type="text" formControlName="title" name="title" class="form-control" id="article_title" placeholder="Название">
+                    </div>
+                    <div *ngIf="form.controls['title'].invalid && form.controls['title'].touched" class="alert alert-danger">
+                        <span *ngIf="form.controls['title'].errors?.['required']">Поле должно быть непустым</span>
+                        <span *ngIf="form.controls['title'].errors?.['minlength']">Минимальная длина должна быть 10 символов</span>
+                        <span *ngIf="form.controls['title'].errors?.['maxlength']">Минимальная длина должна быть не более 200 символов</span>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="article_author" class="form-label">Автор</label>
+                        <select class="form-select" [class.error]="form.controls['author'].invalid && form.controls['author'].touched" formControlName="author">
+                            <option [ngValue]="" selected>Выберите автора</option>
+                            <option *ngFor="let user of users" [ngValue]="user">
+                                {{user}}
+                            </option>
+                        </select>
+                    </div>
+                    <div *ngIf="form.controls['author'].invalid && form.controls['author'].touched" class="alert alert-danger">
+                        Обязательное поле
+                    </div>        
+                </div>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="article_date" class="form-label">Дата публикации</label>
+                        <input type="date" formControlName="date" name="date" class="form-control" id="article_author" placeholder="Дата публикации">
+                    </div>
+                    <div *ngIf="form.controls['date'].invalid && form.controls['date'].touched" class="alert alert-danger">
+                        Обязательное поле
+                    </div>  
+                </div>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="article_picture" class="form-label">Изображение</label>
+                        <input type="text" formControlName="picture" name="picture" class="form-control" id="article_picture" placeholder="Дата публикации">
+                    </div>
+                    <div *ngIf="form.controls['picture'].invalid && form.controls['picture'].touched" class="alert alert-danger">
+                        <span *ngIf="form.controls['picture'].errors?.['required']">Поле должно быть непустым</span>
+                        <span *ngIf="form.controls['picture'].errors?.['check']">Нельзя вводить no</span>
+                    </div>         
+                </div>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="article_previewText" class="form-label">Превью статьи</label>
+                        <textarea name="previewText" formControlName="previewText" class="form-control" id="article_previewText" rows="3"></textarea>
+                    </div>
+                    <div *ngIf="form.controls['previewText'].invalid && form.controls['previewText'].touched" class="alert alert-danger">
+                        Обязательное поле
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="article_fullText" class="form-label">Полный текст</label>
+                        <textarea name="fullText" formControlName="fullText" class="form-control" id="article_fullText" rows="3"></textarea>
+                    </div> 
+                    <div *ngIf="form.controls['fullText'].invalid && form.controls['fullText'].touched" class="alert alert-danger">
+                        Обязательное поле
+                    </div>       
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Отправить</button>
+                </div>
+            </form>
         </div>
     </div>
-    <div class="col-6">
-        <div class="mb-3">
-            <label for="article_author" class="form-label">Автор</label>
-            <select class="form-select" [class.error]="form.controls['author'].invalid && form.controls['author'].touched" formControlName="author">
-                <option [ngValue]="" selected>Выберите автора</option>
-                <option *ngFor="let user of users" [ngValue]="user">
-                    {{user}}
-                </option>
-            </select>
-        </div>
-        <div *ngIf="form.controls['author'].invalid && form.controls['author'].touched" class="alert alert-danger">
-            Обязательное поле
-        </div>        
-    </div>
-    <div class="col-6">
-        <div class="mb-3">
-            <label for="article_date" class="form-label">Дата публикации</label>
-            <input type="date" formControlName="date" name="date" class="form-control" id="article_author" placeholder="Дата публикации">
-        </div>
-        <div *ngIf="form.controls['date'].invalid && form.controls['date'].touched" class="alert alert-danger">
-            Обязательное поле
-        </div>  
-    </div>
-    <div class="col-6">
-        <div class="mb-3">
-            <label for="article_picture" class="form-label">Изображение</label>
-            <input type="text" formControlName="picture" name="picture" class="form-control" id="article_picture" placeholder="Дата публикации">
-        </div>
-        <div *ngIf="form.controls['picture'].invalid && form.controls['picture'].touched" class="alert alert-danger">
-            <span *ngIf="form.controls['picture'].errors?.['required']">Поле должно быть непустым</span>
-            <span *ngIf="form.controls['picture'].errors?.['check']">Нельзя вводить no</span>
-        </div>         
-    </div>
-    <div class="col-6">
-        <div class="mb-3">
-            <label for="article_previewText" class="form-label">Превью статьи</label>
-            <textarea name="previewText" formControlName="previewText" class="form-control" id="article_previewText" rows="3"></textarea>
-        </div>
-        <div *ngIf="form.controls['previewText'].invalid && form.controls['previewText'].touched" class="alert alert-danger">
-            Обязательное поле
-        </div>
-    </div>
-    <div class="col-6">
-        <div class="mb-3">
-            <label for="article_fullText" class="form-label">Полный текст</label>
-            <textarea name="fullText" formControlName="fullText" class="form-control" id="article_fullText" rows="3"></textarea>
-        </div> 
-        <div *ngIf="form.controls['fullText'].invalid && form.controls['fullText'].touched" class="alert alert-danger">
-            Обязательное поле
-        </div>       
-    </div>
-    <div class="col-12">
-        <button type="submit" class="btn btn-primary">Отправить</button>
-    </div>
-</form>
+</div>
