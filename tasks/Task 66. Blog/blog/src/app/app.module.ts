@@ -17,7 +17,7 @@ import { ArticleDetailComponent } from './article-detail/article-detail.componen
 
 
 let routes: Routes = [
-    {path: "", component: HomeComponent, pathMatch: 'full'},
+    {path: "", component: HomeComponentF},
     {path: "list", component: ArticlelistComponent, pathMatch: 'full'},
     {path: "list/:id", component: ArticleDetailComponent},
     {path: "form", component: ArticleformComponent},

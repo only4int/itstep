@@ -1,0 +1,13 @@
+<p>{{post.title}}</p>
+<p>{{post.date | date:'dd.MM.yyyy'}}</p>
+<p>{{getUserName(post.userId)}}</p>
+<p>{{post.fullText}}</p>
+<img [src]="post.picture" [alt]="post.title">
+<a [routerLink]="['/post']">Назад</a>
+<div *ngFor="let comment of comments">
+    <p>{{getUserName(comment.userId)}}</p>
+    <p>
+      {{comment.date | date:'dd.MM.yyyy'}}  
+    </p>
+    <p>{{comment.text}}</p>
+</div>

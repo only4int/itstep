@@ -1,19 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormpostComponent } from './formpost/formpost.component';
+import { FormPostComponent } from './formpost/formpost.component';
 import { PostComponent } from './post.component';
 import { PostRoutingModule } from './post-routing.module';
+import { PostDetailComponent } from './postdetail/postdetail.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
 @NgModule({
   declarations: [
-    FormpostComponent,
-    PostComponent
+    FormPostComponent,
+    PostComponent,
+    PostDetailComponent
   ],
   imports: [
     CommonModule,
-    PostRoutingModule
+    PostRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class PostModule { }
