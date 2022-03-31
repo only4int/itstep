@@ -19,12 +19,19 @@ export class UserService {
         },
     ]
 
+    newUserId = 3;
+
+
+    getNewUserId(){
+        return this.newUserId;
+    }
     get(): Array<User>{
         return this.data;
     }
 
     create(user: User){
         this.data.push(user);
+        this.newUserId++;
     }
 
     remove(id: number): boolean{

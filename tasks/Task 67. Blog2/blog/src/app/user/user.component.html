@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <a routerLink="/user/edit">Добавить</a>
+        </div>
+        <div class="col-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Имя</th>
+                        <th scope="col">Логин</th>
+                        <th scope="col">Пароль</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of users">
+                        <td scope="row">{{user.id}}</td>
+                        <td>{{user.name}}</td>
+                        <td>{{user.login}}</td>
+                        <td>{{user.password}}</td>
+                        <td>
+                            <a [routerLink]="['/user', user.id]"><i class="bi bi-eye"></i></a>
+                            <a [routerLink]="['/user','edit',user.id]"><i class="bi bi-pencil"></i></a>
+                            <a (click)="delete(user.id)"><i class="bi bi-trash"></i></a>    
+                        </td>
+                    </tr>
+                </tbody>
+                </table>
+        </div>
+    </div>
+</div>

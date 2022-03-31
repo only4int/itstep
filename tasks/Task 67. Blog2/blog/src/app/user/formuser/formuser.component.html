@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <form class="row" [formGroup]="form" novalidate (ngSubmit)="addUser()">
+                <div class="col-12">
+                    <div class="mb-3">
+                        <label for="user_name" class="form-label">Имя</label>
+                        <input type="text" formControlName="name" name="name" class="form-control" id="user_name" placeholder="Имя">
+                    </div>
+                    <div *ngIf="form.controls['name'].invalid && form.controls['name'].touched" class="alert alert-danger">
+                        Что-то пошло не так
+                    </div>  
+                </div>
+                <div class="col-12">
+                    <div class="mb-3">
+                        <label for="user_login" class="form-label">Логин</label>
+                        <input type="text" formControlName="login" name="login" class="form-control" id="user_login" placeholder="Логин">
+                    </div>
+                    <div *ngIf="form.controls['login'].invalid && form.controls['login'].touched" class="alert alert-danger">
+                        Что-то пошло не так
+                    </div>  
+                </div>
+                <div class="col-12">
+                    <div class="mb-3">
+                        <label for="user_password" class="form-label">Пароль</label>
+                        <input type="password" formControlName="password" name="password" class="form-control" id="user_password" placeholder="Пароль">
+                    </div>
+                    <div *ngIf="form.controls['password'].invalid && form.controls['password'].touched" class="alert alert-danger">
+                        Что-то пошло не так
+                    </div>  
+                </div> 
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

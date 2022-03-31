@@ -6,7 +6,6 @@ import { PostDetailComponent } from './postdetail/postdetail.component';
 
 const routes: Routes = [
   {path: "", component: PostComponent, pathMatch: 'full' },
-  
   {path: "add", component: FormPostComponent, pathMatch: 'full' },
   {path: ":id", component: PostDetailComponent, pathMatch: 'full' },
 ];
