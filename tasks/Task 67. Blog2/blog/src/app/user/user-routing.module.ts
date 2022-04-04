@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 import { FormUserComponent } from './formuser/formuser.component';
+import { UserResolverService } from './user-resolver.service';
 import { UserComponent } from './user.component';
 import { UserDetailComponent } from './userdetail/userdetail.component';
 
@@ -12,10 +13,10 @@ const routes: Routes = [
     path: "edit", component: FormUserComponent, pathMatch: 'full'
   }, 
      {
-    path: "edit/:id", component: FormUserComponent
+    path: "edit/:id", component: FormUserComponent, resolve: { user: UserResolverService }
   },
      {
-    path: ":id", component: UserDetailComponent
+    path: ":id", component: UserDetailComponent, resolve: { user: UserResolverService }
   },
 ];
 
