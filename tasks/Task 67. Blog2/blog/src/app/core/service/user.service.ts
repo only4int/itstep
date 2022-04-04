@@ -19,8 +19,17 @@ export class UserService {
         },
     ]
 
-    newUserId = 3;
+    newUserId = 3; // ID нового пользователя
 
+    currentUserId = 2; //ID активного пользователя
+
+    getCurrentUserId(){
+        return this.currentUserId;
+    }
+
+    getCurrentUser(){
+        return this.getById(this.currentUserId);
+    }
 
     getNewUserId(){
         return this.newUserId;

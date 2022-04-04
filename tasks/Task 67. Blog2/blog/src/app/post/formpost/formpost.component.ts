@@ -11,7 +11,7 @@ import { Post, PostService, User, UserService } from 'src/app/core';
 export class FormPostComponent implements OnInit {
 
     form: FormGroup;
-    users: Array<User>;
+
     
     constructor(private postService: PostService, private userService: UserService, private router: Router) { 
       this.form = new FormGroup({
@@ -19,10 +19,9 @@ export class FormPostComponent implements OnInit {
         "previewText": new FormControl("", [Validators.required]),
         "fullText": new FormControl("", [Validators.required, Validators.minLength(20)]),
         "picture": new FormControl("", [Validators.required]),
-        "date": new FormControl(new Date(), [Validators.required]),
-        "userId": new FormControl("Выберите автора", [Validators.required])
+        "date": new FormControl(new Date(), [Validators.required])
       })
-      this.users = userService.get();
+      this.userService.getCurrentUserId();
     }
 
   ngOnInit(): void {
@@ -47,7 +46,7 @@ export class FormPostComponent implements OnInit {
             fullText: this.form.controls["fullText"].value,
             picture: this.form.value.picture,
             date: this.form.value.date,
-            userId: this.form.value.userId
+            userId: this.userService.getCurrentUserId()
         };
         
         this.postService.create(article);

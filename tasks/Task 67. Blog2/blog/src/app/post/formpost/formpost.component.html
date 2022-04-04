@@ -15,20 +15,6 @@
                 </div>
                 <div class="col-6">
                     <div class="mb-3">
-                        <label for="article_author" class="form-label">Автор</label>
-                        <select class="form-select" [class.error]="form.controls['userId'].invalid && form.controls['userId'].touched" formControlName="author">
-                            <option [ngValue]="" selected>Выберите автора</option>
-                            <option *ngFor="let user of users" [ngValue]="user.id">
-                                {{user.name}}
-                            </option>
-                        </select>
-                    </div>
-                    <div *ngIf="form.controls['userId'].invalid && form.controls['userId'].touched" class="alert alert-danger">
-                        Обязательное поле
-                    </div>        
-                </div>
-                <div class="col-6">
-                    <div class="mb-3">
                         <label for="article_date" class="form-label">Дата публикации</label>
                         <input type="date" formControlName="date" name="date" class="form-control" id="article_author" placeholder="Дата публикации">
                     </div>
