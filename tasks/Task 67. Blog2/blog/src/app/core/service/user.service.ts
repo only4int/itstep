@@ -21,7 +21,7 @@ export class UserService {
 
     newUserId = 3; // ID нового пользователя
 
-    currentUserId = 2; //ID активного пользователя
+    currentUserId = 1; //ID активного пользователя
 
     getCurrentUserId(){
         return this.currentUserId;
@@ -61,4 +61,17 @@ export class UserService {
 
         return this.data[index];
     } 
+
+    signIn(login: string, password: string): boolean{
+         let index = this.data.findIndex(function(item:User){
+            return item.login == login && item.password == password;
+        });
+
+        if(index !== -1){
+            this.currentUserId = this.data[index].id;
+            return true;
+        }
+
+        return false;
+    }
 }
