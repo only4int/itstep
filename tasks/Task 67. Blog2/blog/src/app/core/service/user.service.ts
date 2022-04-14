@@ -1,3 +1,4 @@
+import { BehaviorSubject } from 'rxjs';
 import { User } from '../model';
 
 export class UserService {
@@ -18,10 +19,17 @@ export class UserService {
             password: "qwerty"
         },
     ]
+    currentUserId = 1; //ID активного пользователя
+
+    currentUserSubject = new BehaviorSubject<User>({} as User);
+    currentUser = this.currentUserSubject.asObservable();
+
+    isAuthSubject = new BehaviorSubject<boolean>(false);
+    isAuth = this.isAuthSubject.asObservable();
 
     newUserId = 3; // ID нового пользователя
 
-    currentUserId = 1; //ID активного пользователя
+   
 
     getCurrentUserId(){
         return this.currentUserId;
@@ -69,6 +77,8 @@ export class UserService {
 
         if(index !== -1){
             this.currentUserId = this.data[index].id;
+            this.currentUserSubject.next(this.data[index]);
+            this.isAuthSubject.next(true);
             return true;
         }
 
