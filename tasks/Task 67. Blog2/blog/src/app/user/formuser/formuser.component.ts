@@ -28,15 +28,17 @@ export class FormUserComponent implements OnInit {
   addUser(){
     if(this.form.invalid)
             return;
-    let newUserId = this.userService.getNewUserId();
-    this.user = {
-      id: newUserId,
+    let data = {
       name: this.form.controls["name"].value,
       login: this.form.controls["login"].value,
       password: this.form.controls["password"].value
     }
 
-    this.userService.create(this.user);
+    this.userService.create(data).subscribe(
+      data => {
+        console.log(data)
+      }
+    );
     this.form.reset();
     this.router.navigate(["/user"]);
 
