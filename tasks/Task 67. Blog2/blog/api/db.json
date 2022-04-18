@@ -17,6 +17,12 @@
       "login": "NikitinAI",
       "password": "32434234",
       "id": 3
+    },
+    {
+      "name": "testuser",
+      "login": "Testtest",
+      "password": "235235235",
+      "id": 4
     }
   ],
   "posts": [
@@ -30,20 +36,20 @@
       "picture": "https://static.tildacdn.com/tild3938-6531-4637-a235-613762383465/555.jpg"
     }
   ],
-  "comments":[
-        {
-            "id": 1,
-            "userId": 2,
-            "postId": 1,
-            "date": "15.01.2022",
-            "text": "Хорошая статья"
-        },
-        {
-            "id": 2,
-            "userId": 1,
-            "postId": 1,
-            "date": "16.01.2022",
-            "text": "Я старался"
-        }
-    ]
+  "comments": [
+    {
+      "id": 1,
+      "userId": 2,
+      "postId": 1,
+      "date": "15.01.2022",
+      "text": "Хорошая статья"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "postId": 1,
+      "date": "16.01.2022",
+      "text": "Я старался"
+    }
+  ]
 }

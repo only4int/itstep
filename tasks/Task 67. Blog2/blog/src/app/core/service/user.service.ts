@@ -1,7 +1,8 @@
 import { BehaviorSubject, Observable } from 'rxjs';
 import { User } from '../model';
-import { HttpClient } from '@angular/common/http';
+
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
@@ -48,22 +49,27 @@ export class UserService {
     }
 
     create(user: any): Observable<any>{
-        console.log(user);
-        return this.http.post("/api/users",
-        JSON.stringify(user),
-        {'headers':{'content-type': 'application/json'}  });
+        return this.http.post(
+            "/api/users",
+            JSON.stringify(user),
+            {'headers':{'content-type': 'application/json'}
+        });
     }
 
     remove(id: number): Observable<any>{
         return this.http.delete("/api/users/"+id);
     }
 
-    getById(id: number): User{
-        let index = this.data.findIndex(function(item:User){
-            return item.id == id;
-        });
+    edit(user: User):Observable<any>{
+        return this.http.put(
+            "/api/users/"+ user.id,
+            JSON.stringify(user),
+            {'headers':{'content-type': 'application/json'}}
+        );
+    }
 
-        return this.data[index];
+    getById(id: number):Observable<any>{
+        return this.http.get("/api/users/"+id);
     } 
 
     signIn(login: string, password: string): boolean{

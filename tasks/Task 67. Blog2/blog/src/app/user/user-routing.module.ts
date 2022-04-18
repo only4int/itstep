@@ -13,10 +13,10 @@ const routes: Routes = [
     path: "edit", component: FormUserComponent, pathMatch: 'full'
   }, 
      {
-    path: "edit/:id", component: FormUserComponent, resolve: { user: UserResolverService }
+    path: "edit/:id", component: FormUserComponent, /*resolve: { user: UserResolverService }*/
   },
      {
-    path: ":id", component: UserDetailComponent, resolve: { user: UserResolverService }
+    path: ":id", component: UserDetailComponent,/* resolve: { user: UserResolverService }*/
   },
 ];
 
