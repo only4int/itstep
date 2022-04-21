@@ -18,6 +18,6 @@ export class PostComponent implements OnInit {
   }
 
   getUserName(userId: number): string{
-      return this.userService.getById(userId)?.name;
+      return "";//this.userService.getById(userId)?.name;
   }
 }

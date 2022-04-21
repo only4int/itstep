@@ -5,7 +5,7 @@ import { FormUserComponent } from './formuser/formuser.component';
 import { UserDetailComponent } from './userdetail/userdetail.component';
 import { UserRoutingModule } from './user-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { UserResolverService } from './user-resolver.service';
+//import { UserResolverService } from './user-resolver.service';
 
 
 
@@ -20,6 +20,6 @@ import { UserResolverService } from './user-resolver.service';
     UserRoutingModule,
     ReactiveFormsModule
   ],
-  providers:[UserResolverService]
+  providers:[]
 })
 export class UserModule { }

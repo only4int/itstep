@@ -1,4 +1,4 @@
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, map, Observable } from 'rxjs';
 import { User } from '../model';
 
 import { Injectable } from '@angular/core';
@@ -73,7 +73,18 @@ export class UserService {
     } 
 
     signIn(login: string, password: string): boolean{
-         let index = this.data.findIndex(function(item:User){
+
+        this.http.get(`/api/user?login=${login}&password=${password}`).pipe(
+            map(
+                (users) => {
+
+                    if((<User[]>users).length > 0){
+                        return (<User[]>users)[0];
+                    }
+                }
+            )
+        )
+        let index = this.data.findIndex(function(item:User){
             return item.login == login && item.password == password;
         });
 
