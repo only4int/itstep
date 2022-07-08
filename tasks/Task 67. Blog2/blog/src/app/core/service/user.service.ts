@@ -72,9 +72,9 @@ export class UserService {
         return this.http.get("/api/users/"+id);
     } 
 
-    signIn(login: string, password: string): boolean{
+    signIn(login: string, password: string): Observable<any>{
 
-        this.http.get(`/api/user?login=${login}&password=${password}`).pipe(
+        return this.http.get(`/api/user?login=${login}&password=${password}`).pipe(
             map(
                 (users) => {
 
@@ -83,8 +83,8 @@ export class UserService {
                     }
                 }
             )
-        )
-        let index = this.data.findIndex(function(item:User){
+        );
+        /*let index = this.data.findIndex(function(item:User){
             return item.login == login && item.password == password;
         });
 
@@ -95,6 +95,6 @@ export class UserService {
             return true;
         }
 
-        return false;
+        return false;*/
     }
 }
